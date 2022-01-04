@@ -36,6 +36,7 @@ tx_gridelements.setup {
                                 <label>LLL:EXT:ms_lebenswurzel/Resources/Private/Language/locallang.xlf:gridelements.features.style</label>
                                 <config type="array">
                                     <type>select</type>
+                                    <renderType>selectSingle</renderType>
                                     <items type="array">
                                         <numIndex index="0" type="array">
                                             <numIndex index="0">Style 1</numIndex>
