@@ -1,0 +1,53 @@
+<f:render partial="Header/All" arguments="{_all}" />
+
+<div class="roadmap roadmap--style-{data.flexform_style}">
+    <f:for each="{data.tx_gridelements_view_raw_columns.11}" as="element" iteration="i">
+
+        <div class="grid-x">
+            <div class="cell hide-for-medium roadmap__line">
+
+            </div>
+            <div class="cell auto {f:if(condition:i.isEven, else:'show-for-medium')} medium-text-right roadmap__item">
+                <f:if condition="{i.isEven}">
+                    <h4 class="medium-text-right">{element.header}</h4>
+                    <f:format.html>{element.bodytext}</f:format.html>
+
+                    <f:for each="{content}" as="contentElement">
+                        <f:if condition="{contentElement.data.uid}=={element.uid}">
+                            <f:render partial="Media/Gallery" arguments="{files: contentElement.files, gallery:contentElement.gallery, data: contentElement.data}"
+                            />
+                        </f:if>
+                    </f:for>
+
+                    <f:if condition="{element.button_link}">
+                        <f:render partial="Buttons" arguments="{data: element}" />
+                    </f:if>
+                </f:if>
+            </div>
+            <div class="cell show-for-medium roadmap__line">
+
+            </div>
+            <div class="cell auto {f:if(condition:i.isOdd, else:'show-for-medium')} roadmap__item">
+                <f:if condition="{i.isOdd}">
+                    <h4>{element.header}</h4>
+                    <f:format.html>{element.bodytext}</f:format.html>
+
+                    <f:for each="{content}" as="contentElement">
+                        <f:if condition="{contentElement.data.uid}=={element.uid}">
+                            <f:render partial="Media/Gallery" arguments="{files: contentElement.files, gallery:contentElement.gallery, data: contentElement.data}" />
+                        </f:if>
+                    </f:for>
+
+                    <f:if condition="{element.button_link}">
+                        <f:render partial="Buttons" arguments="{data: element}" />
+                    </f:if>
+                </f:if>
+            </div>
+        </div>
+    </f:for>
+
+    <div class="roadmap__bottom-content">
+        <f:format.raw>{data.tx_gridelements_view_columns.21}</f:format.raw>
+    </div>
+
+</div>

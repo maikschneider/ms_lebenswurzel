@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers" data-namespace-typo3-fluid="true">
+<nav class="form-navigation">
+	<div class="btn-toolbar" role="toolbar">
+		<div class="grid-x" role="group">
+			<f:if condition="{form.previousPage}">
+				<div class="cell auto">
+					<f:form.hidden property="__currentPage" value="{form.previousPage.index}" />
+					<f:form.button type="button" onclick="document.forms['{form.formDefinition.identifier}'].submit();" class="button success" formnovalidate="formnovalidate"><span
+							class="icon icon-arrow-left left"></span> {formvh:translateElementProperty(element: form.currentPage, renderingOptionProperty: 'previousButtonLabel')}</f:form.button>
+				</div>
+			</f:if>
+			<f:if condition="{form.nextPage}">
+				<f:then>
+					<div class="cell auto text-right">
+						<f:form.button property="__currentPage" value="{form.nextPage.index}" class="button">{formvh:translateElementProperty(element: form.currentPage, renderingOptionProperty: 'nextButtonLabel')} <span class="icon icon-arrow"></span></f:form.button>
+					</div>
+				</f:then>
+				<f:else>
+					<div class="cell auto text-right">
+						<f:form.button property="__currentPage" value="{form.pages -> f:count()}" class="button"><span class="icon icon-plane left"></span>
+							{formvh:translateElementProperty(element: form, renderingOptionProperty: 'submitButtonLabel')}
+						</f:form.button>
+					</div>
+				</f:else>
+			</f:if>
+		</div>
+	</div>
+</nav>
+</html>

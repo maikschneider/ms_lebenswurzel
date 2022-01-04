@@ -1,0 +1,22 @@
+plugin.tx_news {
+	view {
+		templateRootPaths >
+		templateRootPaths {
+			0 = EXT:news/Resources/Private/Templates/
+			1 = EXT:ms_lebenswurzel/Resources/Private/Templates/News/
+		}
+		partialRootPaths >
+		partialRootPaths {
+			0 = EXT:news/Resources/Private/Partials/
+			1 = EXT:ms_lebenswurzel/Resources/Private/Partials/News/
+		}
+		layoutRootPaths >
+		layoutRootPaths {
+			0 = EXT:news/Resources/Private/Layouts/
+			1 = EXT:ms_lebenswurzel/Resources/Private/Layouts/News/
+		}
+	}
+	settings {
+		cssFile >
+	}
+}

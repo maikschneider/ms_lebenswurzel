@@ -1,0 +1,49 @@
+{namespace bw=Blueways\BwPlaceholderImages\ViewHelpers}
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+
+<div class="linkbox linkbox--style{data.layout}">
+    <f:if condition="{page.files}">
+        <f:alias map="{mediaElement: '{page.files.0}'}">
+
+                <a class="linkbox__header placeholderimage" href="{page.link}" {f:if(condition: page.target, then: '
+            target="{page.target}"')} title="{page.title}"
+            {bw:responsiveBackgroundImage(image:mediaElement, small: {width: 600, cropVariant: 'preview'}, medium:
+            {width: 475, cropVariant: 'preview'})->f:format.raw()} >
+            <div class="linkbox__overlay linkbox__overlay--page-color-{page.data.color_class}"></div>
+                <div class="linkbox__content linkbox__content--page-color-{page.data.color_class}">
+                    <h4 class="text-white">{page.title}</h4>
+                    <f:if condition="{page.data.subtitle}">
+                        <f:if condition="{data.imageborder}">
+                            <f:then></f:then>
+                            <f:else>
+                                <p class="text-white" data-equalizer-watch>{page.data.subtitle}</p>
+                            </f:else>
+                        </f:if>
+                    </f:if>
+                </div>
+
+                </a>
+
+        </f:alias>
+    </f:if>
+
+
+    <f:if condition="{page.children}">
+        <ul class="menu linklist">
+            <f:for each="{page.children}" as="child">
+                <li>
+                    <a href="{child.link}" {f:if(condition: child.target, then: ' target="{child.target}"')}
+                    title="{child.title}">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    <span>{child.title}</span>
+                    </a>
+                </li>
+            </f:for>
+        </ul>
+    </f:if>
+</div>
+
+</html>

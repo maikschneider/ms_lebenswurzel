@@ -1,0 +1,19 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default"/>
+
+<f:section name="Main">
+
+	<div class="grid-x align-center">
+		<div class="medium-10 large-8 cell">
+
+			<f:flashMessages />
+			<f:if condition="{formConfiguration}">
+				<formvh:render overrideConfiguration="{formConfiguration}" />
+			</f:if>
+
+		</div>
+	</div>
+</f:section>
+
+</html>

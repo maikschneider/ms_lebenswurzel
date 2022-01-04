@@ -1,0 +1,72 @@
+{namespace bw=Blueways\BwPlaceholderImages\ViewHelpers}
+<f:if condition="{files->f:count()}">
+    <f:then>
+        <f:alias map="{mediaElement: files.0}">
+
+            <f:if condition="{data.is_siteroot}">
+                <f:then>
+                    <section class="header grid-y align-center header--home placeholderimage" title="{mediaElement.originalResource.title}"
+                             {bw:responsiveBackgroundImage(image:mediaElement,
+                             small: {width: 640},
+                             medium: {width: 1024},
+                             large: {width: 1200},
+                             xxlarge: {width: 1200})->f:format.raw()} >
+                        <div class="cell">
+                            <div class="grid-container grid-x align-right">
+                                <div class="cell small-6">
+
+                                    <f:if condition="{mediaElement.description}">
+                                        <p class="header__quote text-white">
+                                            {mediaElement.description}
+                                        </p>
+                                    </f:if>
+
+                                    <f:if condition="{files->f:count()>1}">
+                                        <f:image image="{files.1}" alt="{files.1.alternative}" title="{files.1.title}" />
+                                    </f:if>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <f:image class="header__splash" src="EXT:ms_lebenswurzel/Resources/Public/Images/Frontend/header_home_splash.svg" />
+                    </section>
+                </f:then>
+                <f:else>
+                    <section class="header header--default grid-y align-center placeholderimage" title="{mediaElement.originalResource.title}"
+                             {bw:responsiveBackgroundImage(image:mediaElement,
+                             small: {width: 640, cropVariant:'large'},
+                             medium: {width: 1024, cropVariant:'medium'},
+                             large: {width: 1200, cropVariant:'large'},
+                             xxlarge: {width: 1200, cropVariant:'large'})->f:format.raw()}>
+
+
+                        <div class="cell">
+                            <div class="grid-container grid-x align-right">
+                                <div class="cell small-6">
+
+                                    <f:if condition="{mediaElement.description}">
+                                        <p class="header__quote text-white">
+                                            {mediaElement.description}
+                                        </p>
+                                    </f:if>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <f:render partial="Breadcrumb" arguments="{_all}" />
+
+                </f:else>
+            </f:if>
+
+
+
+        </f:alias>
+    </f:then>
+    <f:else>
+        <section class="header header--no-image"></section>
+    </f:else>
+</f:if>

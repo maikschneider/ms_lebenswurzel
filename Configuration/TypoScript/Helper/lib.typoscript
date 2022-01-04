@@ -1,0 +1,8 @@
+lib.math = TEXT
+  lib.math {
+  current = 1
+  prioriCalc = 1
+}
+
+lib.contentElement.settings.media.popup.linkParams.title.data = file:current:title //file:current:alternative // file:current:description
+lib.contentElement.settings.media.popup.linkParams.ATagParams.dataWrap = class="openCeGallery thumbnail {$styles.content.textmedia.linkWrap.lightboxCssClass}" rel="{$styles.content.textmedia.linkWrap.lightboxRelAttribute}{file:current:uid_foreign}"

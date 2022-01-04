@@ -1,0 +1,28 @@
+tt_content {
+   ms_lebenswurzel_feature < lib.contentElement
+   ms_lebenswurzel_feature {
+	  templateName = Generic
+	  dataProcessing {
+		  10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+		  10 {
+			  references.fieldName = assets
+		  }
+		  # https://usetypo3.com/custom-fsc-element.html
+		  #20 = DanielGoerz\FluidStyledSlider\DataProcessing\FluidStyledSliderProcessor
+	  }
+   }
+	ms_lebenswurzel_person < lib.contentElement
+	ms_lebenswurzel_person {
+		templateName = Person
+		dataProcessing {
+			10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+			10 {
+				references.fieldName = assets
+			}
+		}
+	}
+}
+
+# Extend MenuSubPages to include menu item itself and children
+tt_content.menu_subpages.dataProcessing.10.special = list
+tt_content.menu_subpages.dataProcessing.10.levels = 2

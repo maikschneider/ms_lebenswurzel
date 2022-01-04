@@ -1,0 +1,109 @@
+
+renderingOptions:
+  submitButtonLabel: Absenden
+identifier: kontaktformular
+label: Kontaktformular
+type: Form
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: 'Neue Nachricht: {subject}'
+      recipientAddress: pr@lebenswurzel.org
+      recipientName: Lebenswurzel
+      senderAddress: noreply@lebenswurzel.org
+      senderName: 'Lebenswurzel Webseite'
+      replyToAddress: ''
+      carbonCopyAddress: ''
+      blindCarbonCopyAddress: ''
+      format: html
+      attachUploads: true
+      translation:
+        language: ''
+    identifier: EmailToReceiver
+  -
+    options:
+      message: 'Deine Nachricht wurde erfolgreich versendet!'
+    identifier: Confirmation
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: Zurück
+      nextButtonLabel: Weiter
+    identifier: page-1
+    label: 'Deine Anfrage'
+    type: Page
+    renderables:
+      -
+        defaultValue: ''
+        identifier: name
+        label: Name
+        type: Text
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: Name
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        identifier: subject
+        label: Betreff
+        type: Text
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: Betreff
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        identifier: email
+        label: Email
+        type: Text
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: Email-Adresse
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+          -
+            identifier: EmailAddress
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-1
+        label: 'Telefon / Mobil'
+      -
+        defaultValue: ''
+        identifier: message
+        label: Nachricht
+        type: Textarea
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: ''
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        type: Checkbox
+        identifier: checkbox-1
+        label: Datenschutzhinweis
+        properties:
+          elementDescription: 'Ja, ich bin damit einverstanden, dass meine Angaben für die Abwicklung der Kommunikation vom LebensWurzel e.V. gespeichert werden'
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+  -
+    renderingOptions:
+      previousButtonLabel: Ändern
+      nextButtonLabel: Weiter
+    identifier: summarypage
+    label: Überblick
+    type: SummaryPage

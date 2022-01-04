@@ -1,0 +1,9 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+<div class="grid-x">
+    <div class="cell auto text-{data.button_position}">
+        <f:link.typolink parameter="{data.button_link}" class="button {data.button_class}">{data.button_text}<f:format.raw>{data.button_icon}</f:format.raw></f:link.typolink>
+        <f:link.typolink parameter="{data.button2_link}" class="button {data.button2_class}">{data.button2_text}<f:format.raw>{data.button2_icon}</f:format.raw></f:link.typolink>
+    </div>
+</div>

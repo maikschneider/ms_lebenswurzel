@@ -1,0 +1,26 @@
+TYPO3:
+  CMS:
+    Form:
+      persistenceManager:
+        allowedFileMounts:
+          #10: 1:/user_upload/
+          20: EXT:ms_lebenswurzel/Resources/Private/Forms/
+        allowedExtensionPaths:
+          #10: 1:/user_upload/
+          20: EXT:ms_lebenswurzel/Resources/Private/Forms/
+        allowSaveToExtensionPaths: true
+        allowDeleteFromExtensionPaths: true
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                templateRootPaths:
+                  30: 'EXT:ms_lebenswurzel/Resources/Private/Templates/Form'
+                partialRootPaths:
+                  30: 'EXT:ms_lebenswurzel/Resources/Private/Partials/Form'
+                layoutRootPaths:
+                  30: 'EXT:ms_lebenswurzel/Resources/Private/Layouts/ContentElements'
+            Text:
+              properties:
+                elementErrorClassAttribute: 'is-invalid-input'

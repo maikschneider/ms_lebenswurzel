@@ -1,0 +1,55 @@
+<footer class="designfooter">
+    <div class="grid-container">
+        <div class="grid-x">
+            <div class="cell">
+                <div class="designfooter__wrapper">
+                    <f:image src="EXT:ms_lebenswurzel/Resources/Public/Images/Frontend/footerdesign.png"/>
+                    <f:image class="designfooter__wrapper__splash"
+                             src="EXT:ms_lebenswurzel/Resources/Public/Images/Frontend/footerdesign_splash.svg"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<footer class="footer">
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-4">
+            <f:for each="{footernavigation}" as="footernavigationItem" iteration="i">
+                <div class="cell">
+                    <nav class="menu vertical">
+                        <a class="{f:if(condition: footernavigationItem.active, then:'active')}"
+                           href="{footernavigationItem.link}"
+                           target="{footernavigationItem.target}"
+                           title="{footernavigationItem.title}">
+                            {footernavigationItem.title}
+                        </a>
+
+                        <f:comment>Level 2</f:comment>
+                        <f:if condition="{footernavigationItem.children}">
+                            <f:for each="{footernavigationItem.children}" as="child" iteration="j">
+                                <f:if condition="{j.cycle} < 8">
+                                    <f:then>
+                                        <a class="{f:if(condition: child.active, then:'active')}"
+                                           href="{child.link}"
+                                           target="{child.target}"
+                                           title="{child.title}">
+                                            {child.title}
+                                        </a>
+                                    </f:then>
+                                </f:if>
+                            </f:for>
+                            <f:if condition="{footernavigationItem.children->f:count()} > 7">
+                                <a href="{footernavigationItem.link}"
+                                   target="{footernavigationItem.target}"
+                                   title="{footernavigationItem.title}">
+                                    More...
+                                </a>
+                            </f:if>
+                        </f:if>
+                    </nav>
+                </div>
+            </f:for>
+        </div>
+    </div>
+</footer>

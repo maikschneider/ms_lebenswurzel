@@ -38,7 +38,8 @@
     "vendor-dir": "vendor",
     "allow-plugins": {
       "typo3/*": true,
-      "helhum/dotenv-connector": true
+      "helhum/dotenv-connector": true,
+      "helhum/typo3-console-plugin": true
     }
   },
   "scripts": {

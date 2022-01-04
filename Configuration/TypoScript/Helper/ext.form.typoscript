@@ -1,0 +1,31 @@
+plugin.tx_form {
+	view {
+		templateRootPaths < lib.contentElement.templateRootPaths
+		templateRootPaths.30 = EXT:ms_lebenswurzel/Resources/Private/Templates/Form/
+
+		partialRootPaths < lib.contentElement.partialRootPaths
+		partialRootPaths.30 = EXT:ms_lebenswurzel/Resources/Private/Partials/Form/
+
+		layoutRootPaths < lib.contentElement.layoutRootPaths
+		layoutRootPaths.30 = EXT:ms_lebenswurzel/Resources/Private/Layouts/ContentElements/
+	}
+	settings {
+		yamlConfigurations {
+			10 = EXT:form/Configuration/Yaml/BaseSetup.yaml
+			20 = EXT:form/Configuration/Yaml/FormEngineSetup.yaml
+			# register your own additional configuration
+			# choose a number higher than 30 (below is reserved)
+			100 = EXT:ms_lebenswurzel/Configuration/Yaml/FormSetup.yaml
+		}
+	}
+}
+
+module.tx_form {
+	settings {
+		yamlConfigurations {
+			# register your own additional configuration
+			# choose a number higher than 30 (below is reserved)
+			100 = EXT:ms_lebenswurzel/Configuration/Yaml/FormSetup.yaml
+		}
+	}
+}

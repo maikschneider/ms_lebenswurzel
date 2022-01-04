@@ -1,0 +1,26 @@
+<f:layout name="None" />
+
+<f:section name="Main">
+
+    <div class="grid-x align-center ce-accordion">
+        <div class="cell small-12 {f:if(condition:'{data.layout}==2', then:'', else:'medium-10 large-8')}">
+
+            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                <f:for each="{data.tx_gridelements_view_raw_columns.11}" as="element" iteration="i">
+                    <li class="accordion-item" data-accordion-item>
+
+                        <a href="#" class="accordion-title">{element.header}</a>
+
+                        <div class="accordion-content" data-tab-content>
+
+                            <f:format.raw>{data.tx_gridelements_view_child_{element.uid}}</f:format.raw>
+
+                        </div>
+                    </li>
+                </f:for>
+            </ul>
+
+        </div>
+    </div>
+
+</f:section>

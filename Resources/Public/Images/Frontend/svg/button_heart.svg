@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="14px" viewBox="0 0 15 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-760.000000, -4308.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="roadmap" transform="translate(135.000000, 2962.000000)">
+                <g id="button-orange" transform="translate(450.000000, 1332.000000)">
+                    <path d="M189.823529,18.1668546 C189.823529,21.4600435 182.909286,27.6592053 182.615933,27.9194482 C182.557258,27.9721094 182.483128,28 182.412108,28 C182.334906,28 182.260795,27.9721094 182.20212,27.9163471 C181.902565,27.6375168 174.920394,21.0975793 175.000687,18.1575515 C175.065544,15.8278266 176.887507,14 179.154175,14 C180.438813,14 181.627739,14.5855323 182.412108,15.5892911 C183.196477,14.5855323 184.385404,14 185.670042,14 C187.958329,14 189.823529,15.8681025 189.823529,18.1668546 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

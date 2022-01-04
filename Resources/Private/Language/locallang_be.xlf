@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2018-02-18UTC10:51:370">
+        <header>
+            <authorName>Maik Schneider</authorName>
+            <authorEmail>schneider.maik@me.com</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="backend_layout.default">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.normal">
+                <source>Normal</source>
+            </trans-unit>
+
+            <trans-unit id="palette.buttons">
+                <source>Buttons</source>
+            </trans-unit>
+            <trans-unit id="button_link">
+                <source>1. Button Link</source>
+            </trans-unit>
+            <trans-unit id="button2_link">
+                <source>2. Button Link</source>
+            </trans-unit>
+            <trans-unit id="button_text">
+                <source>1. Button Text</source>
+            </trans-unit>
+            <trans-unit id="button2_text">
+                <source>2. Button Text</source>
+            </trans-unit>
+            <trans-unit id="button_class">
+                <source>1. Button Style</source>
+            </trans-unit>
+            <trans-unit id="button2_class">
+                <source>2. Button Style</source>
+            </trans-unit>
+            <trans-unit id="button_class.default">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="button_class.success">
+                <source>Green</source>
+            </trans-unit>
+            <trans-unit id="button_position">
+                <source>Buttons position</source>
+            </trans-unit>
+            <trans-unit id="button_position.default">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="button_position.left">
+                <source>Left</source>
+            </trans-unit>
+            <trans-unit id="button_position.right">
+                <source>Right</source>
+            </trans-unit>
+            <trans-unit id="button_icon">
+                <source>1. Button Icon</source>
+            </trans-unit>
+            <trans-unit id="button2_icon">
+                <source>2. Button Icon</source>
+            </trans-unit>
+            <trans-unit id="button_icon.default">
+                <source>None</source>
+            </trans-unit>
+            <trans-unit id="button_icon.arrow">
+                <source>Arrow</source>
+            </trans-unit>
+            <trans-unit id="button_icon.heart">
+                <source>Heart</source>
+            </trans-unit>
+            <trans-unit id="button_icon.plane">
+                <source>Plane</source>
+            </trans-unit>
+            <trans-unit id="button_icon.download">
+                <source>Download</source>
+            </trans-unit>
+
+            <trans-unit id="palette.style">
+                <source>Style</source>
+            </trans-unit>
+            <trans-unit id="color_class">
+                <source>Color</source>
+            </trans-unit>
+            <trans-unit id="color_class.default">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="color_class.orange">
+                <source>Orange</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

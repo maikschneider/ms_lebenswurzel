@@ -1,0 +1,222 @@
+
+renderingOptions:
+  submitButtonLabel: Absenden
+identifier: mitgliedsantrag
+label: 'Antrag Vereinsmitgliedschaft'
+type: Form
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: '[SOLAWI] Neuer Mitgliedsantrag Vereinsmitgliedschaft'
+      recipientAddress: mitgliedschaft@lebenswurzel.org
+      recipientName: 'LebensWurzel Mitgliedschaft'
+      senderAddress: noreply@lebenswurzel.org
+      senderName: 'Lebenswurzel Webseite'
+      replyToAddress: ''
+      carbonCopyAddress: ''
+      blindCarbonCopyAddress: ''
+      format: html
+      attachUploads: true
+      translation:
+        language: ''
+    identifier: EmailToReceiver
+  -
+    options:
+      message: 'Deine Daten wurden erfolgreich übermittelt, wir melden uns bei dir!'
+    identifier: Confirmation
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: Zurück
+      nextButtonLabel: 'Daten überprüfen'
+    identifier: page-1
+    label: 'Ich möchte Vereinsmitglied werden'
+    type: Page
+    renderables:
+      -
+        properties:
+          options:
+            Frau: Frau
+            Herr: Herr
+          fluidAdditionalAttributes:
+            required: required
+        type: SingleSelect
+        identifier: singleselect-1
+        label: Anrede
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        identifier: subject
+        label: Vorname
+        type: Text
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: Vorname
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        identifier: name
+        label: Name
+        type: Text
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: Name
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-2
+        label: Geburtsdatum
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+            placeholder: dd.mm.yyyy
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-3
+        label: 'Straße und Hausnummer'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+            placeholder: 'Straße und Hausnummer'
+          elementDescription: ''
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-4
+        label: Postleitzahl
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+            minlength: '5'
+            maxlength: '5'
+            placeholder: Postleitzahl
+          elementDescription: ''
+        validators:
+          -
+            identifier: NotEmpty
+          -
+            options:
+              minimum: '5'
+              maximum: '5'
+            identifier: StringLength
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-5
+        label: Ort
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+            placeholder: Ort
+          elementDescription: ''
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        identifier: email
+        label: 'E-Mail Adresse'
+        type: Text
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: 'E-Mail Adresse'
+            required: required
+          elementDescription: ''
+        validators:
+          -
+            identifier: NotEmpty
+          -
+            identifier: EmailAddress
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-1
+        label: 'Telefon / Mobil'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+            placeholder: 'Telefon / Mobil'
+          elementDescription: ''
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        properties:
+          dateFormat: d.m.Y
+          enableDatePicker: false
+          displayTimeSelector: false
+          elementDescription: ''
+          fluidAdditionalAttributes:
+            required: required
+            placeholder: dd.mm.yyyy
+        type: DatePicker
+        identifier: datepicker-1
+        label: 'Ich möchte Vereinsmitglied werden ab'
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        properties:
+          options:
+            Ja: Ja
+            Nein: Nein
+          elementDescription: ''
+        type: RadioButton
+        identifier: radiobutton-1
+        label: 'Ich möchte auch Ernteteiler werden'
+        defaultValue: Nein
+      -
+        type: Checkbox
+        identifier: checkbox-1
+        label: 'Ich habe die aktuelle Satzung und Beitragsordnung gelesen und erkenne diese an.'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+          elementDescription: ''
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        identifier: message
+        label: Anmerkungen
+        type: Textarea
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: 'Hinweise / Anmerkungen / Fragen?'
+          elementDescription: ''
+      -
+        type: Checkbox
+        identifier: checkbox-2
+        label: Datenschutzhinweis
+        properties:
+          elementDescription: 'Ja, ich bin damit einverstanden, dass meine Angaben zu Zwecken der Vereinsorganisation vom LebensWurzel e.V. gespeichert werden'
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+  -
+    renderingOptions:
+      previousButtonLabel: Ändern
+      nextButtonLabel: Weiter
+    identifier: summarypage
+    label: Übersicht
+    type: SummaryPage

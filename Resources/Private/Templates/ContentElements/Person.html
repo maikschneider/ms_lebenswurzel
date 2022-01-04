@@ -1,0 +1,43 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Header">
+
+</f:section>
+<f:section name="Main">
+
+    <div class="grid-x collapse align-center">
+        <div class="cell {f:if(condition:'{data.header_link} || {data.rowDescription}', then: 'medium-12 large-10', else: 'medium-10 large-8')} small-12">
+            <div class="grid-x grid-padding-x ce-person">
+
+                <f:if condition="{data.header_link} || {data.rowDescription}">
+                    <div class="cell small-12 medium-auto align-self-middle">
+                        <f:if condition="{data.header_link}">
+                            <span class="h1">{data.header_link}</span>
+                        </f:if>
+                        <f:if condition="{data.rowDescription}">
+                            <p>{data.rowDescription}</p>
+                        </f:if>
+                    </div>
+                </f:if>
+
+                <div class="cell shrink">
+                    <f:if condition="{files}">
+                        <span class="ce-person__image">
+                            <f:image image="{files.0}" width="125" />
+                        </span>
+                    </f:if>
+                </div>
+
+                <div class="cell auto">
+                    <h2>{data.header}</h2>
+                    <h3 class="">{data.subheader}</h3>
+                    <f:format.html>{data.bodytext}</f:format.html>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</f:section>
+
+</html>

@@ -1,0 +1,25 @@
+
+mod.wizards.newContentElement.wizardItems.common {
+   elements {
+      ms_lebenswurzel_feature {
+         iconIdentifier = ms_lebenswurzel_feature
+         title = LLL:EXT:ms_lebenswurzel/Resources/Private/Language/locallang.xlf:tca.wizard.feature.title
+         description = LLL:EXT:ms_lebenswurzel/Resources/Private/Language/locallang.xlf:tca.wizard.feature.description
+         tt_content_defValues {
+            CType = ms_lebenswurzel_feature
+         }
+      }
+      ms_lebenswurzel_person {
+         iconIdentifier = ms_lebenswurzel_person
+         title = LLL:EXT:ms_lebenswurzel/Resources/Private/Language/locallang.xlf:tca.wizard.person.title
+         description = LLL:EXT:ms_lebenswurzel/Resources/Private/Language/locallang.xlf:tca.wizard.person.description
+         tt_content_defValues {
+            CType = ms_lebenswurzel_person
+         }
+      }
+   }
+   show := addToList(ms_lebenswurzel_feature)
+   show := addToList(ms_lebenswurzel_person)
+}
+# for simple preview (without images)
+#mod.web_layout.tt_content.preview.ms_lebenswurzel_feature = EXT:ms_lebenswurzel/Resources/Private/Extensions/Fluid_styled_content/Previews/Slider.html

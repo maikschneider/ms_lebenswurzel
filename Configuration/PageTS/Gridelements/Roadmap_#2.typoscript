@@ -1,0 +1,66 @@
+# http://www.networkteam.com/blog/post/gridelements-professionell-nutzen.html
+tx_gridelements.setup {
+    # Kommentar 1
+    2 {
+        title = LLL:EXT:ms_lebenswurzel/Resources/Private/Language/locallang.xlf:gridelements.roadmap.title
+        description = LLL:EXT:ms_lebenswurzel/Resources/Private/Language/locallang.xlf:gridelements.roadmap.description
+        config {
+            colCount = 1
+            rowCount = 2
+            rows {
+                1 {
+                    columns {
+                        1 {
+                            name = LLL:EXT:ms_lebenswurzel/Resources/Private/Language/locallang.xlf:gridelements.roadmap.columnName.top
+                            colPos = 11
+                            allowed = textmedia
+                        }
+                    }
+                }
+                2 {
+                    columns {
+                        1 {
+                            name = LLL:EXT:ms_lebenswurzel/Resources/Private/Language/locallang.xlf:gridelements.roadmap.columnName.bottom
+                            colPos = 21
+                            allowed = textmedia
+                        }
+                    }
+                }
+            }
+        }
+
+        icon = EXT:ms_lebenswurzel/Resources/Public/Icons/Gridelements/Roadmap.svg
+
+        # Kommentar 2
+        flexformDS (
+            <T3DataStructure>
+                <meta>
+                    <langDisable>1</langDisable>
+                </meta>
+                <ROOT type="array">
+                    <type>array</type>
+                    <el type="array">
+                        <style type="array">
+                            <TCEforms type="array">
+                                <label>LLL:EXT:ms_lebenswurzel/Resources/Private/Language/locallang.xlf:gridelements.roadmap.style</label>
+                                <config type="array">
+                                    <type>select</type>
+                                    <items type="array">
+                                        <numIndex index="0" type="array">
+                                            <numIndex index="0">LLL:EXT:ms_lebenswurzel/Resources/Private/Language/locallang.xlf:gridelements.roadmap.style.default</numIndex>
+                                            <numIndex index="1">default</numIndex>
+                                        </numIndex>
+                                        <numIndex index="1" type="array">
+                                            <numIndex index="0">LLL:EXT:ms_lebenswurzel/Resources/Private/Language/locallang.xlf:gridelements.roadmap.style.green</numIndex>
+                                            <numIndex index="1">green</numIndex>
+                                        </numIndex>
+                                    </items>
+                                </config>
+                            </TCEforms>
+                        </style>
+                    </el>
+                </ROOT>
+            </T3DataStructure>
+        )
+    }
+}

@@ -1,0 +1,128 @@
+<div class="title-bar hide-for-medium">
+    <div class="grid-x">
+        <div class="cell shrink">
+            <a class="logo-text" href="/" title="Startseite">LebensWurzel e.V.</a>
+        </div>
+        <div class="cell auto text-right cell--navigation">
+            <button class="menu-icon" type="button" data-toggle="navigationWrapper"></button>
+        </div>
+    </div>
+</div>
+
+<div id="navigationWrapper" class="off-canvas in-canvas-for-medium position-right" data-off-canvas>
+    <div class="grid-y">
+        <div class="cell medium-order-2">
+            <div data-sticky-container>
+                <div id="navigationWrapper__sticky"
+                     data-sticky
+                     data-options="marginTop:0;topAnchor:stickyAnchor;stickyOn:small"
+                     style="width:100%">
+                    <div class="top-bar" id="responsive-menu">
+                        <div class="grid-container">
+                            <div class="grid-x">
+                                <div class="small-12 medium-3 cell show-for-medium">
+
+                                    <ul class="menu align-center medium-align-left">
+                                        <li>
+                                            <a class="logo-text" href="/" title="Startseite">LebensWurzel e.V.</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="small-12 medium-auto cell cell--navigationWrap">
+
+                                    <ul class="menu vertical medium-horizontal menu--level1"
+                                        data-responsive-menu="accordion medium-dropdown"
+                                        data-closing-time="100"
+                                        data-submenu-toggle="true"
+                                        data-multi-open="false"
+                                        data-hover-delay="200"
+                                        data-multi-open="true">
+                                        <f:for each="{mainnavigation}" as="mainnavigationItem" iteration="i">
+                                            <li class="{f:if(condition: mainnavigationItem.active, then:'active')} {f:if(condition: mainnavigationItem.children, then:'has-submenu')}">
+                                                <a href="{mainnavigationItem.link}"
+                                                   target="{mainnavigationItem.target}"
+                                                   title="{mainnavigationItem.title}">
+                                                    {mainnavigationItem.title}
+                                                </a>
+                                                <f:if condition="{mainnavigationItem.children}">
+                                                    <ul class="vertical menu menu--level2" data-submenu>
+
+                                                        <li class="is-category show-for-medium">
+                                                            <f:if condition="{mainnavigationItem.files}">
+                                                                <f:image image="{mainnavigationItem.files.0}"
+                                                                         cropVariant="preview"
+                                                                         width="400"
+                                                                         title="{mainnavigationItem.files.0.originalResource.title}"
+                                                                         alt="{mainnavigationItem.files.0.originalResource.alternative}"/>
+                                                            </f:if>
+                                                            <span class="text-left">
+
+                                                                <strong class="text-center">{mainnavigationItem.title}</strong>
+                                                                {mainnavigationItem.data.abstract}
+
+                                                            </span>
+                                                            <a href="{mainnavigationItem.link}"
+                                                               target="{mainnavigationItem.target}"
+                                                               class="button"
+                                                               title="{mainnavigationItem.title}">
+                                                                Mehr erfahren
+                                                            </a>
+                                                        </li>
+
+                                                        <f:for each="{mainnavigationItem.children}" as="child">
+                                                            <li class="{f:if(condition: child.active, then:'active')}">
+                                                                <a href="{child.link}"
+                                                                   target="{child.target}"
+                                                                   title="{child.title}">
+                                                                    <f:if condition="{child.files}">
+                                                                        <f:image image="{child.files.0}"
+                                                                                 cropVariant="large"
+                                                                                 class="{f:if(condition: child.children, then:'show-for-large')}"
+                                                                                 width="400"
+                                                                                 title="{child.files.0.originalResource.title}"
+                                                                                 alt="{child.files.0.originalResource.alternative}"/>
+                                                                    </f:if>
+                                                                    <span class="large-text-center">{child.title}</span>
+                                                                </a>
+                                                                <f:if condition="{child.children}">
+                                                                    <ul class="vertical menu menu--level3">
+                                                                        <f:for each="{child.children}" as="child2">
+                                                                            <li class="{f:if(condition: child2.active, then:'active')}">
+                                                                                <a href="{child2.link}"
+                                                                                   target="{child2.target}"
+                                                                                   title="{child2.title}">
+                                                                                    {child2.title}
+                                                                                </a>
+                                                                            </li>
+                                                                        </f:for>
+                                                                    </ul>
+                                                                </f:if>
+                                                            </li>
+                                                        </f:for>
+                                                    </ul>
+                                                </f:if>
+                                            </li>
+                                        </f:for>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cell auto medium-12 medium-order-1">
+
+        </div>
+        <div class="hide-for-medium shrink">
+            <a href="#" class="button secondary large expanded" data-close>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <path fill="#FFFFFF"
+                          d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>
+<div id="stickyAnchor"></div>

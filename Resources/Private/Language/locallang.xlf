@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2018-02-18UTC10:51:370">
+        <header>
+            <authorName>Maik Schneider</authorName>
+            <authorEmail>schneider.maik@me.com</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="imageManipulation.desktop">
+                <source>Desktop</source>
+            </trans-unit>
+            <trans-unit id="imageManipulation.preview">
+                <source>Preview</source>
+            </trans-unit>
+            <trans-unit id="imageManipulation.medium">
+                <source>Tablett</source>
+            </trans-unit>
+            <trans-unit id="imageManipulation.large">
+                <source>Desktop &amp; Smartphone</source>
+            </trans-unit>
+            <trans-unit id="imageManipulation.smallmedium">
+                <source>Smartphone and Tablet</source>
+            </trans-unit>
+            <trans-unit id="imageManipulation.large.free">
+                <source>Desktop</source>
+            </trans-unit>
+            <trans-unit id="imageManipulation.default">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="imageManipulation.gallery">
+                <source>Gallery</source>
+            </trans-unit>
+
+            <trans-unit id="gridelements.features.title">
+                <source>Features</source>
+            </trans-unit>
+            <trans-unit id="gridelements.features.description">
+                <source>Columns of icon with headline and short paragraph (2 available styles).</source>
+            </trans-unit>
+            <trans-unit id="gridelements.features.style">
+                <source>Style</source>
+            </trans-unit>
+            <trans-unit id="gridelements.features.grayBackground">
+                <source>Gray background color?</source>
+            </trans-unit>
+            <trans-unit id="gridelements.roadmap.title">
+                <source>Roadmap</source>
+            </trans-unit>
+            <trans-unit id="gridelements.roadmap.description">
+                <source>Numbered textelements next to a line forming a roadmap</source>
+            </trans-unit>
+            <trans-unit id="gridelements.roadmap.columnName.top">
+                <source>Single Steps</source>
+            </trans-unit>
+            <trans-unit id="gridelements.roadmap.columnName.bottom">
+                <source>Last Element (full width)</source>
+            </trans-unit>
+            <trans-unit id="gridelements.roadmap.style">
+                <source>Style</source>
+            </trans-unit>
+            <trans-unit id="gridelements.roadmap.style.default">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="gridelements.roadmap.style.green">
+                <source>Green</source>
+            </trans-unit>
+            <trans-unit id="gridelements.roadmap.grayBackground">
+                <source>Green background color?</source>
+            </trans-unit>
+            <trans-unit id="gridelements.header.title">
+                <source>Image Header</source>
+            </trans-unit>
+            <trans-unit id="gridelements.header.description">
+                <source>Image header for content section</source>
+            </trans-unit>
+            <trans-unit id="gridelements.header.image">
+                <source>Background image</source>
+            </trans-unit>
+            <trans-unit id="gridelements.header.position">
+                <source>Position</source>
+            </trans-unit>
+            <trans-unit id="gridelements.header.position.left">
+                <source>Left</source>
+            </trans-unit>
+            <trans-unit id="gridelements.header.position.center">
+                <source>Center</source>
+            </trans-unit>
+            <trans-unit id="gridelements.header.position.right">
+                <source>Right</source>
+            </trans-unit>
+            <trans-unit id="gridelements.accordion.title">
+                <source>Accordion</source>
+            </trans-unit>
+            <trans-unit id="gridelements.accordion.elements">
+                <source>Content elements</source>
+            </trans-unit>
+
+            <trans-unit id="tca.wizard.feature.title">
+                <source>Feature item</source>
+            </trans-unit>
+            <trans-unit id="tca.wizard.feature.description">
+                <source>Visuell text and icon element</source>
+            </trans-unit>
+            <trans-unit id="tca.feature.icon">
+                <source>Icon</source>
+            </trans-unit>
+            <trans-unit id="tca.feature.button.link">
+                <source>Button link</source>
+            </trans-unit>
+            <trans-unit id="tca.feature.button.text">
+                <source>Button text</source>
+            </trans-unit>
+
+            <trans-unit id="tca.wizard.person.title">
+                <source>Contact person</source>
+            </trans-unit>
+            <trans-unit id="tca.wizard.person.description">
+                <source>Contact data of a person with image</source>
+            </trans-unit>
+            <trans-unit id="tca.person.image">
+                <source>Profile picture</source>
+            </trans-unit>
+            <trans-unit id="tca.person.name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="tca.person.jobtitle">
+                <source>Job title</source>
+            </trans-unit>
+            <trans-unit id="tca.person.left.headline">
+                <source>Left headline</source>
+            </trans-unit>
+            <trans-unit id="tca.person.left.text">
+                <source>Left text</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

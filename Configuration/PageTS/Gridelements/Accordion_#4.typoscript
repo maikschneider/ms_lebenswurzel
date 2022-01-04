@@ -1,0 +1,22 @@
+tx_gridelements.setup {
+    4 {
+        title = LLL:EXT:ms_lebenswurzel/Resources/Private/Language/locallang.xlf:gridelements.accordion.title
+        config {
+            colCount = 1
+            rowCount = 1
+            rows {
+                1 {
+                    columns {
+                        1 {
+                            name = LLL:EXT:ms_lebenswurzel/Resources/Private/Language/locallang.xlf:gridelements.accordion.elements
+                            colPos = 11
+                            allowed = *
+                        }
+                    }
+                }
+            }
+        }
+
+        icon = EXT:ms_lebenswurzel/Resources/Public/Icons/Gridelements/Accordion.svg
+    }
+}

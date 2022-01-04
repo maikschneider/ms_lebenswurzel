@@ -1,1 +1,5 @@
 .idea
+vendor
+public
+!Resources/Public
+var

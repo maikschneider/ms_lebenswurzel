@@ -1,0 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+<f:if condition="{settings.cssFile}">
+	<n:includeFile path="{settings.cssFile}" />
+</f:if>
+
+<div class="news news--single">
+    <div class="grid-x align-center">
+        <div class="cell medium-10 large-8">
+            <div class="article" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <f:render section="content" />
+            </div>
+        </div>
+    </div>
+</div>
+</html>

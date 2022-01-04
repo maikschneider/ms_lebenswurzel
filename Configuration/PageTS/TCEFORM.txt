@@ -1,0 +1,72 @@
+#
+# TCEFORM
+#
+TCEFORM {
+    pages {
+
+    }
+    tt_content {
+        # General
+    	CType.removeItems = text, textpic, table, header, image, table, bullets, menu_abstract, menu_categorized_content, menu_categorized_pages, menu_recently_updated, menu_related_pages, menu_section, menu_section_pages, menu_sitemap, menu_sitemap_pages
+        header_position.removeItems = right
+        header_link.disabled = 1
+        header_link.types.ms_lebenswurzel_feature.disabled = 0
+    	header_link.types.ms_lebenswurzel_person.disabled = 0
+        date.disabled = 1
+
+        # Media
+        imagewidth.disabled = 1
+        imageheight.disabled = 1
+        imageborder{
+            disabled = 1
+            label = Hide page description
+            label.de = Seitenbeschreibung ausblenden
+            types{
+                menu_pages.disabled = 0
+                menu_subpages.disabled = 0
+            }
+        }
+        imagecols.disabled = 1
+        imageorient.removeItems = 1,2,4,5,9,10,17,18,25,26
+
+        # Appearance
+        layout{
+            # CTypes
+            types{
+                textmedia{
+                    removeItems = 3
+                    altLabels.0 = Standard
+                    altLabels.1 = Zwei Spalten
+                    altLabels.2 = Volle Textbreite (Desktop)
+                }
+                menu_pages{
+                    removeItems = 0,3
+                    altLabels.1 = Style 1
+                    altLabels.2 = Style 2
+                }
+                menu_subpages{
+                    removeItems = 0,3
+                    altLabels.1 = Style 1
+                    altLabels.2 = Style 2
+                }
+            }
+        }
+    	frame_class {
+            removeItems = ruler-before, ruler-after, indent, indent-left, indent-right
+            addItems {
+                greenbar = Grüner Hintergrund
+            }
+        }
+        space_before_class.disabled = 1
+        space_after_class.disabled = 1
+        sectionIndex.disabled = 1
+        linkToTop.disabled = 1
+        rowDescription{
+        	disabled = 1
+        	types {
+        		ms_lebenswurzel_feature.disabled = 0
+				ms_lebenswurzel_person.disabled = 0
+        	}
+        }
+    }
+}

@@ -1,0 +1,53 @@
+<div class="grid-x grid-padding-x small-up-2 large-up-4 align-center feature__grid" xmlns:f="http://www.w3.org/1999/html">
+    <f:for each="{data.tx_gridelements_view_raw_columns}" as="column">
+        <f:for each="{column}" as="element" iteration="i">
+
+            <f:comment>
+                ####### STYLE 1 #######
+            </f:comment>
+            <f:if condition="{data.flexform_style}==1">
+                <div class="cell">
+                    <div class="feature text-center feature--style1">
+                        <f:for each="{content.{i.index}.files}" as="file" iteration="j">
+                            <f:if condition="{j.index}==0">
+                                <div class="feature__icon grid-y align-center">
+                                    <div class="cell">
+                                        <f:image src="{file.originalFile.uid}" />
+                                    </div>
+                                </div>
+                            </f:if>
+                        </f:for>
+                        <span class="feature__title h4">{element.header}</span>
+                        <p class="h6 text-upper">{element.subheader}</p>
+                        <p>{element.bodytext}</p>
+                    </div>
+                </div>
+            </f:if>
+
+            <f:comment>
+                ####### STYLE 2 #######
+            </f:comment>
+            <f:if condition="{data.flexform_style}==2">
+                <div class="cell small-12 medium-4 grid-y feature feature--style2 text-center">
+                    <div class="small-12 cell auto">
+                        <span class="feature__title h2">{element.header}</span>
+                        <f:for each="{content.{i.index}.files}" as="file" iteration="j">
+                            <f:if condition="{j.index}==0">
+                                <span class="feature__icon">
+                                    <f:image src="{file.originalFile.uid}" />
+                                </span>
+                            </f:if>
+                        </f:for>
+                        <p>{element.bodytext}</p>
+                    </div>
+                    <div class="cell">
+                        <f:if condition="{element.header_link}">
+                            <f:link.typolink parameter="{element.header_link}" class="button hollow">{element.subheader}</f:link.typolink>
+                        </f:if>
+                    </div>
+                </div>
+
+            </f:if>
+        </f:for>
+    </f:for>
+</div>

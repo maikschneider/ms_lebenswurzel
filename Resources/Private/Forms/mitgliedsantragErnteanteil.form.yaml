@@ -1,0 +1,246 @@
+
+renderingOptions:
+  submitButtonLabel: Absenden
+identifier: mitgliedsantragErnteanteil
+label: 'Antrag Ernteanteil'
+type: Form
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: '[SOLAWI] Neuer Ernteteiler-Antrag'
+      recipientAddress: mitgliedschaft@lebenswurzel.org
+      recipientName: 'LebensWurzel Mitgliedschaft'
+      senderAddress: noreply@lebenswurzel.org
+      senderName: 'LebensWurzel Webseite'
+      replyToAddress: ''
+      carbonCopyAddress: ''
+      blindCarbonCopyAddress: ''
+      format: html
+      attachUploads: true
+      translation:
+        language: ''
+    identifier: EmailToReceiver
+  -
+    options:
+      message: 'Deine Daten wurden erfolgreich übermittelt, wir melden uns bei dir!'
+    identifier: Confirmation
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: Zurück
+      nextButtonLabel: 'Daten überprüfen'
+    identifier: page-1
+    label: 'Ich möchte Ernteteiler werden'
+    type: Page
+    renderables:
+      -
+        properties:
+          options:
+            Frau: Frau
+            Herr: Herr
+          fluidAdditionalAttributes:
+            required: required
+        type: SingleSelect
+        identifier: singleselect-1
+        label: Anrede
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        identifier: subject
+        label: Vorname
+        type: Text
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: Vorname
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        identifier: name
+        label: Name
+        type: Text
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: Name
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-2
+        label: Geburtsdatum
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: dd.mm.yyyy
+            required: required
+          elementDescription: ''
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-3
+        label: 'Straße und Hausnummer'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+            placeholder: 'Staße und Hausnummer'
+          elementDescription: ''
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-4
+        label: Postleitzahl
+        properties:
+          fluidAdditionalAttributes:
+            minlength: '5'
+            maxlength: '5'
+            required: required
+            placeholder: Postleitzahl
+          elementDescription: ''
+        validators:
+          -
+            options:
+              minimum: '5'
+              maximum: '5'
+            identifier: StringLength
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-5
+        label: Ort
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+            placeholder: Ort
+          elementDescription: ''
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        identifier: email
+        label: 'E-Mail Adresse'
+        type: Text
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+            placeholder: 'E-Mail Adresse'
+          elementDescription: ''
+        validators:
+          -
+            identifier: NotEmpty
+          -
+            identifier: EmailAddress
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-1
+        label: 'Telefon / Mobil'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+            placeholder: 'Telefon / Mobil'
+          elementDescription: ''
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        properties:
+          dateFormat: d.m.Y
+          enableDatePicker: false
+          displayTimeSelector: false
+          elementDescription: ''
+          fluidAdditionalAttributes:
+            required: required
+            placeholder: dd.mm.yyyy
+        type: DatePicker
+        identifier: datepicker-1
+        label: 'Ich möchte meinen Ernteanteil beziehen ab'
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        properties:
+          options:
+            Struppen: 'Struppen (auf dem Hof)'
+            Pirna: Pirna
+            Dresden-Leubnitz: Dresden-Leubnitz
+            Dresden-Löbtau: Dresden-Löbtau
+            Dresden-Neustadt: Dresden-Neustadt
+            Dresden-Striesen: Dresden-Striesen
+          elementDescription: ''
+          fluidAdditionalAttributes:
+            required: required
+        type: SingleSelect
+        identifier: singleselect-2
+        label: 'Ich möchte meinen Ernteanteil in diesem Depot abholen'
+        defaultValue: Struppen
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        properties:
+          options:
+            'bestehendes Mitglied': 'Ich bin bereits Mitglied im LebensWurzel e.V.'
+            Nein: 'Ich möchte Mitglied im LebensWurzel e.V. werden'
+          elementDescription: ''
+          fluidAdditionalAttributes:
+            required: required
+        type: RadioButton
+        identifier: radiobutton-1
+        label: Vereinsmitgliedschaft
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        type: Checkbox
+        identifier: checkbox-1
+        label: 'Ich habe die aktuelle Satzung und Beitragsordnung gelesen und erkenne diese an.'
+        properties:
+          elementDescription: ''
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        identifier: message
+        label: Anmerkungen
+        type: Textarea
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: 'Hinweise / Anmerkungen / Fragen?'
+          elementDescription: ''
+      -
+        type: Checkbox
+        identifier: checkbox-2
+        label: Datenschutzhinweis
+        properties:
+          elementDescription: 'Ja, ich bin damit einverstanden, dass meine Angaben zu Zwecken der Vereinsorganisation vom LebensWurzel e.V. gespeichert werden'
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+  -
+    renderingOptions:
+      previousButtonLabel: Ändern
+      nextButtonLabel: Absenden
+    identifier: summarypage
+    label: Übersicht
+    type: SummaryPage

@@ -1,0 +1,19 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+<div class="grid-x">
+    <div class="cell shrink">
+        <f:image class="filetype" src="EXT:ms_lebenswurzel/Resources/Public/Icons/Filetypes/{file.extension}.svg" />
+    </div>
+    <div class="cell auto">
+        <a href="{file.publicUrl}" {f:if(condition:data.target,then: ' target="{data.target}"')}{f:if(condition: file.title, then:
+            ' title="{file.title}"')}>
+            <span class="ce-uploads-fileName">{f:if(condition: file.properties.title, then: file.properties.title, else: file.name) -> f:format.htmlspecialchars()}</span>
+        </a>
+        <f:if condition="{file.properties.description}">
+            <p>{file.properties.description}</p>
+        </f:if>
+    </div>
+</div>
+
+</html>
