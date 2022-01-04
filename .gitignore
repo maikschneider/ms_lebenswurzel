@@ -3,3 +3,6 @@ vendor
 public
 !Resources/Public
 var
+!public/typo3conf/LocalConfiguration.php
+!public/typo3conf/AdditionalConfiguration.php
+!public/.htaccess

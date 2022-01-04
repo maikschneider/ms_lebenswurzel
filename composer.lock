@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f0f73cd11fe431a8690729bd81e86c62",
+    "content-hash": "04fbc7d2cdca91a7c2ba76f70d57472f",
     "packages": [
         {
             "name": "blueways/bw-placeholder-images",
@@ -50,6 +50,50 @@
                 "source": "https://bitbucket.org/blueways/bw_placeholder_images/src/ec51424dc1d8976f6dea27a41ba8d095f99b2aaa/?at=v1.0.3"
             },
             "time": "2019-03-20T09:51:08+00:00"
+        },
+        {
+            "name": "blueways/deployer-recipes",
+            "version": "v2.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/blueways/deployer-recipes.git",
+                "reference": "4f1e579caf48ce29fde527142d42985d8925db46"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/blueways/deployer-recipes/get/4f1e579caf48ce29fde527142d42985d8925db46.zip",
+                "reference": "4f1e579caf48ce29fde527142d42985d8925db46",
+                "shasum": ""
+            },
+            "require": {
+                "sourcebroker/deployer-extended-typo3": "17.0.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maik Schneider",
+                    "email": "m.schneider@blueways.de",
+                    "homepage": "https://blueways.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "blueways deployer recipes",
+            "homepage": "https://bitbucket.org/blueways/deployer-recipes",
+            "keywords": [
+                "deploy",
+                "deployer",
+                "deployment",
+                "recipes",
+                "rsync"
+            ],
+            "support": {
+                "source": "https://bitbucket.org/blueways/deployer-recipes/src/4f1e579caf48ce29fde527142d42985d8925db46/?at=v2.1.3"
+            },
+            "time": "2021-12-08T18:09:40+00:00"
         },
         {
             "name": "cogpowered/finediff",
@@ -105,6 +149,43 @@
                 "source": "https://github.com/cogpowered/FineDiff/tree/master"
             },
             "time": "2014-05-19T10:25:02+00:00"
+        },
+        {
+            "name": "deployer/dist",
+            "version": "v6.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/deployphp/distribution.git",
+                "reference": "857158fa5466d5135ce87f07fe67779b6b6a13d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/deployphp/distribution/zipball/857158fa5466d5135ce87f07fe67779b6b6a13d2",
+                "reference": "857158fa5466d5135ce87f07fe67779b6b6a13d2",
+                "shasum": ""
+            },
+            "bin": [
+                "dep"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anton Medvedev",
+                    "email": "anton@medv.io"
+                }
+            ],
+            "description": "Deployer Phar Distribution",
+            "homepage": "https://deployer.org",
+            "support": {
+                "docs": "https://deployer.org/docs",
+                "issues": "https://github.com/deployphp/deployer/issues",
+                "source": "https://github.com/deployphp/deployer"
+            },
+            "time": "2020-04-25T18:48:50+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -1122,6 +1203,77 @@
             "time": "2021-10-29T14:13:35+00:00"
         },
         {
+            "name": "helhum/dotenv-connector",
+            "version": "v3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/helhum/dotenv-connector.git",
+                "reference": "d95a808e9ff408116800eb60cd820bd9ff4d5b46"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/helhum/dotenv-connector/zipball/d95a808e9ff408116800eb60cd820bd9ff4d5b46",
+                "reference": "d95a808e9ff408116800eb60cd820bd9ff4d5b46",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0",
+                "php": ">=7.2",
+                "symfony/dotenv": "^5.1"
+            },
+            "require-dev": {
+                "composer/composer": "^1.0 || 2.0.*@dev",
+                "composer/semver": "^1.0 || ^2.0 || 3.0.*@dev",
+                "mikey179/vfsstream": "^1.6.0",
+                "phpunit/phpunit": "^5"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Helhum\\DotEnvConnector\\Plugin",
+                "branch-alias": {
+                    "dev-latest": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Helhum\\DotEnvConnector\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Helmut Hummel",
+                    "email": "info@helhum.io"
+                }
+            ],
+            "description": "Makes it possible to set environment variables for composer projects.",
+            "homepage": "https://github.com/helhum/dotenv-connector",
+            "keywords": [
+                "12factor",
+                "composer",
+                "dotenv",
+                "env"
+            ],
+            "support": {
+                "issues": "https://github.com/helhum/dotenv-connector/issues",
+                "source": "https://github.com/helhum/dotenv-connector/tree/v3.0.1"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/helhum/19.99",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/helhum",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-10-06T09:02:51+00:00"
+        },
+        {
             "name": "helhum/typo3-console",
             "version": "v5.8.6",
             "source": {
@@ -1828,6 +1980,296 @@
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
+            "name": "sourcebroker/deployer-extended",
+            "version": "16.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sourcebroker/deployer-extended.git",
+                "reference": "ad9cedae01235e1a4f98d988eb619b1c4c2f9149"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sourcebroker/deployer-extended/zipball/ad9cedae01235e1a4f98d988eb619b1c4c2f9149",
+                "reference": "ad9cedae01235e1a4f98d988eb619b1c4c2f9149",
+                "shasum": ""
+            },
+            "require": {
+                "deployer/dist": "^6.4.0",
+                "sourcebroker/deployer-instance": "^4.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SourceBroker\\DeployerExtended\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Krystian Szymukowicz",
+                    "email": "k.szymukowicz@gmail.com"
+                },
+                {
+                    "name": "Krystian Liński",
+                    "email": "krystian.linski@gmail.com"
+                }
+            ],
+            "description": "Library with some additional tasks for deployer (deployer.org).",
+            "keywords": [
+                "deployer"
+            ],
+            "support": {
+                "issues": "https://github.com/sourcebroker/deployer-extended/issues",
+                "source": "https://github.com/sourcebroker/deployer-extended/tree/16.1.0"
+            },
+            "time": "2021-03-21T13:30:11+00:00"
+        },
+        {
+            "name": "sourcebroker/deployer-extended-database",
+            "version": "13.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sourcebroker/deployer-extended-database.git",
+                "reference": "15c983804eb65910cf7280d8b736898eb95eb8a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sourcebroker/deployer-extended-database/zipball/15c983804eb65910cf7280d8b736898eb95eb8a7",
+                "reference": "15c983804eb65910cf7280d8b736898eb95eb8a7",
+                "shasum": ""
+            },
+            "require": {
+                "deployer/dist": "^6.4.0",
+                "sourcebroker/deployer-instance": "^4.0.0",
+                "sourcebroker/deployer-loader": "^2.0.0",
+                "symfony/dotenv": "^3.3.0 || ^4.0.0 || ^5.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SourceBroker\\DeployerExtendedDatabase\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Krystian Szymukowicz",
+                    "email": "k.szymukowicz@gmail.com"
+                }
+            ],
+            "description": "Deployer tasks to manage database synchronization between application instances.",
+            "keywords": [
+                "database",
+                "deployer",
+                "deployer.org",
+                "synchronization"
+            ],
+            "support": {
+                "issues": "https://github.com/sourcebroker/deployer-extended-database/issues",
+                "source": "https://github.com/sourcebroker/deployer-extended-database/tree/13.0.1"
+            },
+            "time": "2020-10-16T20:12:01+00:00"
+        },
+        {
+            "name": "sourcebroker/deployer-extended-media",
+            "version": "8.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sourcebroker/deployer-extended-media.git",
+                "reference": "2f333cd7debd4637728915b5cbecdd42c226dfc6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sourcebroker/deployer-extended-media/zipball/2f333cd7debd4637728915b5cbecdd42c226dfc6",
+                "reference": "2f333cd7debd4637728915b5cbecdd42c226dfc6",
+                "shasum": ""
+            },
+            "require": {
+                "deployer/dist": "^6.4.0",
+                "sourcebroker/deployer-instance": "^4.0.0",
+                "sourcebroker/deployer-loader": "^2.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SourceBroker\\DeployerExtendedMedia\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Krystian Szymukowicz",
+                    "email": "k.szymukowicz@gmail.com"
+                }
+            ],
+            "description": "Deployer tasks to manage media synchronization between application instances.",
+            "keywords": [
+                "deployer",
+                "media",
+                "synchronization"
+            ],
+            "support": {
+                "issues": "https://github.com/sourcebroker/deployer-extended-media/issues",
+                "source": "https://github.com/sourcebroker/deployer-extended-media/tree/8.0.0"
+            },
+            "time": "2020-10-16T20:43:49+00:00"
+        },
+        {
+            "name": "sourcebroker/deployer-extended-typo3",
+            "version": "17.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sourcebroker/deployer-extended-typo3.git",
+                "reference": "c9bfc3a7d7a200d993109bf706eac0b1405aae0f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sourcebroker/deployer-extended-typo3/zipball/c9bfc3a7d7a200d993109bf706eac0b1405aae0f",
+                "reference": "c9bfc3a7d7a200d993109bf706eac0b1405aae0f",
+                "shasum": ""
+            },
+            "require": {
+                "deployer/dist": "~6.8.0",
+                "helhum/dotenv-connector": "^1.1.0 || ^2.3.0 || ^3.0.0",
+                "helhum/typo3-console": "^1.1.9 || ^4.9.0 || ^5.5.0 || ^6.0.0 || ^7.0.0",
+                "sourcebroker/deployer-extended": "^16.0.0",
+                "sourcebroker/deployer-extended-database": "^13.0.0",
+                "sourcebroker/deployer-extended-media": "^8.0.0",
+                "sourcebroker/deployer-loader": "^2.0.0",
+                "symfony/dotenv": "^3.3.0 || ^4.0 || ^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "typo3/cms": {
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                    "web-dir": ".Build/Web"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SourceBroker\\DeployerExtendedTypo3\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Krystian Szymukowicz",
+                    "email": "k.szymukowicz@gmail.com"
+                },
+                {
+                    "name": "Krystian Liński",
+                    "email": "krystian.linski@gmail.com"
+                }
+            ],
+            "description": "Deployment tool for TYPO3.",
+            "keywords": [
+                "deployer",
+                "typo3"
+            ],
+            "support": {
+                "issues": "https://github.com/sourcebroker/deployer-extended-typo3/issues",
+                "source": "https://github.com/sourcebroker/deployer-extended-typo3/tree/17.0.0"
+            },
+            "time": "2021-09-22T11:43:37+00:00"
+        },
+        {
+            "name": "sourcebroker/deployer-instance",
+            "version": "4.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sourcebroker/deployer-instance.git",
+                "reference": "bddd4a5bc5c4539bced99b1907086156c4a698fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sourcebroker/deployer-instance/zipball/bddd4a5bc5c4539bced99b1907086156c4a698fe",
+                "reference": "bddd4a5bc5c4539bced99b1907086156c4a698fe",
+                "shasum": ""
+            },
+            "require": {
+                "deployer/dist": "^6.4.0",
+                "php": ">=7.0",
+                "symfony/dotenv": "^3.3.0 || ^4.0 || ^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SourceBroker\\DeployerInstance\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Krystian Szymukowicz",
+                    "email": "k.szymukowicz@gmail.com"
+                }
+            ],
+            "description": "Instance management for deployer.",
+            "keywords": [
+                "deployer"
+            ],
+            "support": {
+                "issues": "https://github.com/sourcebroker/deployer-instance/issues",
+                "source": "https://github.com/sourcebroker/deployer-instance/tree/4.0.2"
+            },
+            "time": "2021-01-14T13:52:02+00:00"
+        },
+        {
+            "name": "sourcebroker/deployer-loader",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sourcebroker/deployer-loader.git",
+                "reference": "847630037f257151bafe7c48e97913663f19de7b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sourcebroker/deployer-loader/zipball/847630037f257151bafe7c48e97913663f19de7b",
+                "reference": "847630037f257151bafe7c48e97913663f19de7b",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SourceBroker\\DeployerLoader\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Krystian Szymukowicz",
+                    "email": "k.szymukowicz@gmail.com"
+                }
+            ],
+            "description": "Autoload of vendors and autoload of deployer tasks.",
+            "keywords": [
+                "deployer"
+            ],
+            "support": {
+                "issues": "https://github.com/sourcebroker/deployer-loader/issues",
+                "source": "https://github.com/sourcebroker/deployer-loader/tree/2.0.1"
+            },
+            "time": "2021-06-20T16:13:58+00:00"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v5.4.12",
             "source": {
@@ -2218,6 +2660,77 @@
                 }
             ],
             "time": "2021-07-12T14:48:14+00:00"
+        },
+        {
+            "name": "symfony/dotenv",
+            "version": "v5.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/dotenv.git",
+                "reference": "1f28b9b3edf9da7e2c4b295dcd1df291ccb498d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/dotenv/zipball/1f28b9b3edf9da7e2c4b295dcd1df291ccb498d3",
+                "reference": "1f28b9b3edf9da7e2c4b295dcd1df291ccb498d3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/deprecation-contracts": "^2.1|^3"
+            },
+            "require-dev": {
+                "symfony/console": "^4.4|^5.0|^6.0",
+                "symfony/process": "^4.4|^5.0|^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Dotenv\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Registers environment variables from a .env file",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "dotenv",
+                "env",
+                "environment"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/dotenv/tree/v5.4.2"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-12-16T21:52:00+00:00"
         },
         {
             "name": "symfony/expression-language",
