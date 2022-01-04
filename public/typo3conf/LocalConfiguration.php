@@ -16,18 +16,10 @@ return [
             ],
         ],
     ],
-    'EXT' => [
-        'extConf' => [
-            'backend' => 'a:6:{s:9:"loginLogo";s:0:"";s:19:"loginHighlightColor";s:0:"";s:20:"loginBackgroundImage";s:0:"";s:13:"loginFootnote";s:0:"";s:11:"backendLogo";s:0:"";s:14:"backendFavicon";s:0:"";}',
-            'extensionmanager' => 'a:2:{s:21:"automaticInstallation";s:1:"1";s:11:"offlineMode";s:1:"0";}',
-            'gridelements' => 'a:6:{s:20:"additionalStylesheet";s:0:"";s:19:"nestingInListModule";s:1:"0";s:26:"overlayShortcutTranslation";s:1:"0";s:19:"disableDragInWizard";s:1:"0";s:25:"disableCopyFromPageButton";s:1:"0";s:38:"disableAutomaticUnusedColumnCorrection";s:1:"0";}',
-            'news' => 'a:17:{s:13:"prependAtCopy";s:1:"1";s:6:"tagPid";s:1:"1";s:12:"rteForTeaser";s:1:"0";s:22:"contentElementRelation";s:1:"1";s:21:"contentElementPreview";s:1:"1";s:13:"manualSorting";s:1:"0";s:19:"categoryRestriction";s:0:"";s:34:"categoryBeGroupTceFormsRestriction";s:1:"0";s:19:"dateTimeNotRequired";s:1:"0";s:11:"archiveDate";s:4:"date";s:12:"mediaPreview";s:5:"false";s:20:"advancedMediaPreview";s:1:"1";s:24:"showAdministrationModule";s:1:"1";s:35:"hidePageTreeForAdministrationModule";s:1:"0";s:12:"showImporter";s:1:"0";s:18:"storageUidImporter";s:1:"1";s:22:"resourceFolderImporter";s:12:"/news_import";}',
-            'scheduler' => 'a:2:{s:11:"maxLifetime";s:4:"1440";s:15:"showSampleTasks";s:1:"1";}',
-        ],
-    ],
+    'EXT' => [],
     'EXTCONF' => [
         'helhum-typo3-console' => [
-            'initialUpgradeDone' => '9.5',
+            'initialUpgradeDone' => '10.4',
         ],
         'lang' => [
             'availableLanguages' => [
@@ -37,12 +29,12 @@ return [
     ],
     'EXTENSIONS' => [
         'backend' => [
-            'backendFavicon' => '',
-            'backendLogo' => '',
-            'loginBackgroundImage' => '',
+            'backendFavicon' => 'EXT:ms_lebenswurzel/Resources/Public/Images/Icons/backend.png',
+            'backendLogo' => 'EXT:ms_lebenswurzel/Resources/Public/Images/Icons/backend.png',
+            'loginBackgroundImage' => 'EXT:ms_lebenswurzel/Resources/Public/Images/Backend/login_screen.jpg',
             'loginFootnote' => '',
-            'loginHighlightColor' => '',
-            'loginLogo' => '',
+            'loginHighlightColor' => '#3E5F46',
+            'loginLogo' => 'EXT:ms_lebenswurzel/Resources/Public/Images/Frontend/svg/lebenswurzel_logo.svg',
         ],
         'extensionmanager' => [
             'automaticInstallation' => '1',
@@ -53,6 +45,7 @@ return [
             'disableAutomaticUnusedColumnCorrection' => '0',
             'disableCopyFromPageButton' => '0',
             'disableDragInWizard' => '0',
+            'fluidBasedPageModule' => '0',
             'nestingInListModule' => '0',
             'overlayShortcutTranslation' => '0',
         ],
@@ -72,6 +65,7 @@ return [
             'rteForTeaser' => '0',
             'showAdministrationModule' => '1',
             'showImporter' => '0',
+            'slugBehaviour' => 'unique',
             'storageUidImporter' => '1',
             'tagPid' => '1',
         ],
@@ -113,6 +107,5 @@ return [
         'encryptionKey' => '7b6ca5a931bb6faaf60136c7106efe319c12cca9ec66bf44a7b28e13ee6bad366af35b579820f535f9ce53e5679c7e9c',
         'exceptionalErrors' => 4096,
         'sitename' => 'Lebenswurzel e.V.',
-        'systemLogLevel' => 2,
     ],
 ];
