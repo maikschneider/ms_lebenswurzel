@@ -201,9 +201,12 @@ page {
 
 	includeJSFooterlibs {
 		ms_lebenswurzel_scripts = EXT:ms_lebenswurzel/Resources/Public/JavaScript/Dist/app.js
+		intersectionObserver >
+		placeholderImages >
 	}
 
 	includeJSFooter {
-
+		intersectionObserver = {$plugin.bw_placeholder_images.settings.intersectionObserverJS}
+		placeholderImages = {$plugin.bw_placeholder_images.settings.placeholderImagesJS}
 	}
 }

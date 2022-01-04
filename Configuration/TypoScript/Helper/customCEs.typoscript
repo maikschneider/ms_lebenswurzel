@@ -1,6 +1,6 @@
 tt_content {
-   ms_lebenswurzel_feature < lib.contentElement
-   ms_lebenswurzel_feature {
+   ms_lebenswurzel_feature.20 < lib.contentElement
+   ms_lebenswurzel_feature.20 {
 	  templateName = Generic
 	  dataProcessing {
 		  10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor

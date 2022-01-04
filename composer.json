@@ -12,7 +12,7 @@
   "require": {
     "typo3/cms-base-distribution": "^9.5",
     "gridelementsteam/gridelements": "^9.0",
-    "blueways/bw-placeholder-images": "dev-master",
+    "blueways/bw-placeholder-images": "1.0.3",
     "georgringer/news": "^7.0"
   },
   "require-dev": {

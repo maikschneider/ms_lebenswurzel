@@ -1,7 +1,11 @@
 ######################
 #### DEPENDENCIES ####
 ######################
-@import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.txt'
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:gridelements/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:form/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:bw_placeholder_images/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:news/Configuration/TypoScript/setup.txt'
 
 
 #############
