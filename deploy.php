@@ -23,7 +23,7 @@ host('production')
         'https://lebenswurzel.org'
     ])
     ->set('bin/composer', '/usr/local/bin/composer')
-    ->set('bin/php', '/usr/bin/php')
+    ->set('bin/php', '/usr/bin/php7.3')
     ->set('deploy_path', '/home/lebenswurzel/vhosts/lebenswurzel.org/typo3-production');
 
 host('local')
