@@ -13,6 +13,7 @@ set('db_dumpclean_keep', [
 
 host('production')
     ->hostname('lebenswurzel.org')
+    ->port('24327')
     ->stage('production')
     ->user('lebenswurzel')
     ->set('http_user', 'www-data')
