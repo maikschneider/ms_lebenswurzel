@@ -52,7 +52,7 @@ $GLOBALS['TCA']['tt_content']['types']['ms_lebenswurzel_feature']['columnsOverri
     ]
 );
 // Register for hook to show preview of tt_content element of CType="ms_lebenswurzel_feature" in page module
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem'][] = \TYPO3\LebenswurzelBase\Hooks\FeaturePreviewRenderer::class;
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem'][] = \MaikSchneider\MsLebenswurzel\Hooks\FeaturePreviewRenderer::class;
 
 /*
 
@@ -104,7 +104,7 @@ $GLOBALS['TCA']['tt_content']['types']['ms_lebenswurzel_person']['columnsOverrid
     ],
 ];
 // Register for hook to show preview of tt_content element of CType="ms_lebenswurzel_feature" in page module
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem'][] = \TYPO3\LebenswurzelBase\Hooks\PersonPreviewRenderer::class;
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem'][] = \MaikSchneider\MsLebenswurzel\Hooks\PersonPreviewRenderer::class;
 
 
 // Crop settings add Gallery
