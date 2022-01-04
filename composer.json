@@ -1,0 +1,53 @@
+{
+  "name": "maikschneider/ms-lebenswurzel",
+  "description": "TYPO3 extension for LebensWurzel e.V.",
+  "type": "typo3-cms-extension",
+  "authors": [
+    {
+      "name": "Maik Schneider",
+      "email": "schneider.maik@me.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "typo3/cms-base-distribution": "^9.5",
+    "gridelementsteam/gridelements": "^9.0",
+    "blueways/bw-placeholder-images": "dev-master",
+    "georgringer/news": "^7.0"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  },
+  "autoload": {
+    "psr-4": {
+      "MaikSchneider\\MsLebenswurzel\\": "Classes"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": "public",
+      "extension-key": "ms_lebenswurzel"
+    },
+    "helhum/dotenv-connector": {
+      "env-file": ".env",
+      "adapter": "Helhum\\DotEnvConnector\\Adapter\\SymfonyDotEnv"
+    }
+  },
+  "config": {
+    "vendor-dir": "vendor",
+    "allow-plugins": {
+      "typo3/*": true,
+      "helhum/dotenv-connector": true
+    }
+  },
+  "scripts": {
+    "typo3-cms-scripts": [
+      "ln -sfn ../../../ public/typo3conf/ext/ms_lebenswurzel",
+      "vendor/bin/typo3cms install:fixfolderstructure"
+    ],
+    "post-autoload-dump": [
+      "@typo3-cms-scripts"
+    ]
+  }
+}
