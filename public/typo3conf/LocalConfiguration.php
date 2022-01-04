@@ -6,7 +6,6 @@ return [
         'explicitADmode' => 'explicitAllow',
         'installToolPassword' => '$pbkdf2-sha256$25000$hgKzBbTsU1oQDRUAXbcQaw$XPcTghq03szaT/Sa6CE1orsxKMRzNO.RmS3fuEn1YQY',
         'lockSSL' => true,
-        'loginSecurityLevel' => 'normal',
     ],
     'DB' => [
         'Connections' => [
@@ -19,7 +18,7 @@ return [
     'EXT' => [],
     'EXTCONF' => [
         'helhum-typo3-console' => [
-            'initialUpgradeDone' => '10.4',
+            'initialUpgradeDone' => '11.5',
         ],
         'lang' => [
             'availableLanguages' => [
@@ -77,7 +76,6 @@ return [
     'FE' => [
         'compressionLevel' => 0,
         'debug' => false,
-        'loginSecurityLevel' => 'normal',
     ],
     'GFX' => [
         'jpg_quality' => '80',
@@ -101,7 +99,6 @@ return [
         'transport_smtp_username' => '',
     ],
     'SYS' => [
-        'cookieSecure' => 1,
         'devIPmask' => '',
         'displayErrors' => 0,
         'encryptionKey' => '7b6ca5a931bb6faaf60136c7106efe319c12cca9ec66bf44a7b28e13ee6bad366af35b579820f535f9ce53e5679c7e9c',
