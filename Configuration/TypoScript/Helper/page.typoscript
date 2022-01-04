@@ -1,0 +1,209 @@
+page = PAGE
+page {
+	typeNum = 0
+	shortcutIcon = EXT:ms_lebenswurzel/Resources/Public/Images/Icons/favicon.png
+
+	headerData.20 = TEXT
+	headerData.20.value (
+        <link rel="manifest" href="/typo3conf/ext/ms_lebenswurzel/Resources/Public/manifest.json">
+        <link rel="apple-touch-icon" href="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/apple-touch-icon.png">
+        <link rel="apple-touch-icon" href="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/apple-touch-icon-57x57.png" sizes="57x57">
+        <link rel="apple-touch-icon" href="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/apple-touch-icon-60x60.png" sizes="60x60">
+        <link rel="apple-touch-icon" href="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/apple-touch-icon-72x72.png" sizes="72x72">
+        <link rel="apple-touch-icon" href="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/apple-touch-icon-76x76.png" sizes="76x76">
+        <link rel="apple-touch-icon" href="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/apple-touch-icon-114x114.png" sizes="114x114">
+        <link rel="apple-touch-icon" href="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/apple-touch-icon-120x120.png" sizes="120x120">
+        <link rel="apple-touch-icon" href="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/apple-touch-icon-128x128.png" sizes="128x128">
+        <link rel="apple-touch-icon" href="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/apple-touch-icon-144x144.png" sizes="144x144">
+        <link rel="apple-touch-icon" href="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/apple-touch-icon-152x152.png" sizes="152x152">
+        <link rel="apple-touch-icon" href="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/apple-touch-icon-180x180.png" sizes="180x180">
+        <link rel="apple-touch-icon" href="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/apple-touch-icon-precomposed.png">
+        <link rel="icon" type="image/png" href="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/favicon-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/favicon-196x196.png" sizes="196x196">
+        <meta name="msapplication-TileImage" content="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/win8-tile-144x144.png">
+        <meta name="msapplication-TileColor" content="#f6fff4">
+        <meta name="msapplication-navbutton-color" content="#ffffff">
+        <meta name="application-name" content="Lebenswurzel"/>
+        <meta name="msapplication-tooltip" content="Lebenswurzel"/>
+        <meta name="apple-mobile-web-app-title" content="Lebenswurzel"/>
+        <meta name="msapplication-square70x70logo" content="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/win8-tile-70x70.png">
+        <meta name="msapplication-square144x144logo" content="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/win8-tile-144x144.png">
+        <meta name="msapplication-square150x150logo" content="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/win8-tile-150x150.png">
+        <meta name="msapplication-wide310x150logo" content="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/win8-tile-310x150.png">
+        <meta name="msapplication-square310x310logo" content="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/win8-tile-310x310.png">
+	)
+
+	headerData.30 = TEXT
+	headerData.30.value (
+        <!-- Matomo -->
+        <script type="text/javascript">
+          var _paq = _paq || [];
+          /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+          _paq.push(['trackPageView']);
+          _paq.push(['enableLinkTracking']);
+          (function() {
+            var u="//matomo.lebenswurzel.org/";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+          })();
+        </script>
+        <!-- End Matomo Code -->
+	)
+
+	headerData.50 = TEXT
+	headerData.50 {
+		typolink.parameter.data = TSFE:id
+		typolink.forceAbsoluteUrl = 1
+		typolink.returnLast = url
+		wrap = <meta property="og:url" content="|" />
+	}
+
+	10 = FLUIDTEMPLATE
+	10 {
+		templateName = Default
+		templateRootPaths.0 = EXT:ms_lebenswurzel/Resources/Private/Templates/Page/
+		partialRootPaths.0 = EXT:ms_lebenswurzel/Resources/Private/Partials/Page/
+		layoutRootPaths.0 = EXT:ms_lebenswurzel/Resources/Private/Layouts/Page/
+
+		dataProcessing {
+			10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+			10 {
+				references.fieldName = media
+			}
+
+			20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+			20 {
+				levels = 3
+				includeSpacer = 1
+				as = mainnavigation
+				dataProcessing {
+					10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+					10 {
+						references.fieldName = media
+					}
+				}
+			}
+
+			30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+			30 {
+				special = rootline
+				special.range = 0|-1
+				as = breadcrumb
+				includeNotInMenu = 1
+			}
+
+			40 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+			40 {
+				levels = 1
+				includeSpacer = 1
+				as = footernavigation
+				includeNotInMenu = 1
+			}
+		}
+	}
+
+	meta {
+		viewport = {$page.meta.viewport}
+		robots = {$page.meta.robots}
+		apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
+		description = {$page.meta.description}
+		description {
+			override.field = description
+		}
+
+		author = {$page.meta.author}
+		author {
+			override.field = author
+		}
+
+		keywords = {$page.meta.keywords}
+		keywords {
+			override.field = keywords
+		}
+
+		X-UA-Compatible = {$page.meta.compatible}
+		X-UA-Compatible {
+			attribute = http-equiv
+		}
+
+		# OpenGraph Tags
+		og:title {
+			attribute = property
+			field = title
+		}
+
+		og:site_name {
+			attribute = property
+			value = LebensWurzel e.V.
+		}
+
+		og:description = {$page.meta.description}
+		og:description {
+			attribute = property
+			field = description
+		}
+
+
+		og:image {
+			attribute = property
+			stdWrap.cObject = FILES
+			stdWrap.cObject {
+				references {
+					data = levelfield:-1, media, slide
+				}
+
+
+				maxItems = 1
+				renderObj = COA
+				renderObj {
+					10 = IMG_RESOURCE
+					10 {
+						file {
+							import.data = file:current:uid
+							treatIdAsReference = 1
+							width = 1280c
+							height = 720c
+						}
+						stdWrap {
+							typolink {
+								parameter.data = TSFE:lastImgResourceInfo|3
+								returnLast = url
+								forceAbsoluteUrl = 1
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	includeCSSLibs {
+
+	}
+
+	includeCSS {
+		ms_lebenswurzel_layout = EXT:ms_lebenswurzel/Resources/Public/Css/app.css
+	}
+
+	includeJSLibs {
+
+	}
+
+	includeJS {
+
+	}
+
+	includeJSFooterlibs {
+		ms_lebenswurzel_scripts = EXT:ms_lebenswurzel/Resources/Public/JavaScript/Dist/app.js
+	}
+
+	includeJSFooter {
+
+	}
+}
