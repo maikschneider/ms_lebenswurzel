@@ -1,0 +1,6 @@
+version: '3.6'
+services:
+  web:
+    volumes:
+      - "$HOME/Sites/gridelements:/var/www/html/packages/gridelements"
+      - "$HOME/Sites/bw_placeholder_images:/var/www/html/packages/bw_placeholder_images"

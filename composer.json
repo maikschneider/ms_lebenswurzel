@@ -38,14 +38,25 @@
     "typo3/cms-setup": "^11.4",
     "typo3/cms-tstemplate": "^11.4",
     "typo3/cms-viewpage": "^11.4",
-    "gridelementsteam/gridelements": "dev-master",
+    "gridelementsteam/gridelements": "@dev",
     "georgringer/news": "^9.0",
     "blueways/deployer-recipes": "^2.0",
-    "blueways/bw-placeholder-images": "dev-master"
+    "blueways/bw-placeholder-images": "@dev",
+    "php": "^8.0"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"
   },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "./packages/gridelements"
+    },
+    {
+      "type": "path",
+      "url": "./packages/bw_placeholder_images"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "MaikSchneider\\MsLebenswurzel\\": "Classes"
