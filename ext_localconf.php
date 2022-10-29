@@ -16,3 +16,5 @@ $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['backend'] = serialize([
     'backendLogo' => 'EXT:ms_lebenswurzel/Resources/Public/Images/Icons/backend.png',
     'backendFavicon' => 'EXT:ms_lebenswurzel/Resources/Public/Images/Icons/backend.png'
 ]);
+
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update']['gridelements_migration'] = \MaikSchneider\MsLebenswurzel\Updates\GridelementsMigrationUpdate::class;
