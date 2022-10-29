@@ -37,25 +37,6 @@ page {
         <meta name="msapplication-square310x310logo" content="/typo3conf/ext/ms_lebenswurzel/Resources/Public/Images/Icons/win8-tile-310x310.png">
 	)
 
-	headerData.30 = TEXT
-	headerData.30.value (
-        <!-- Matomo -->
-        <script type="text/javascript">
-          var _paq = _paq || [];
-          /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-          _paq.push(['trackPageView']);
-          _paq.push(['enableLinkTracking']);
-          (function() {
-            var u="//matomo.lebenswurzel.org/";
-            _paq.push(['setTrackerUrl', u+'piwik.php']);
-            _paq.push(['setSiteId', '1']);
-            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-          })();
-        </script>
-        <!-- End Matomo Code -->
-	)
-
 	headerData.50 = TEXT
 	headerData.50 {
 		typolink.parameter.data = TSFE:id
