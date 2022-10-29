@@ -34,19 +34,15 @@ return [
             'loginFootnote' => '',
             'loginHighlightColor' => '#3E5F46',
             'loginLogo' => 'EXT:ms_lebenswurzel/Resources/Public/Images/Frontend/svg/lebenswurzel_logo.svg',
+            'loginLogoAlt' => '',
+        ],
+        'bw_placeholder_images' => [
+            'triangularApiKey' => 'D78i1FbsOTOFRyhMjEoa',
+            'triangularServer' => 'http://127.0.0.1:8080',
         ],
         'extensionmanager' => [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
-        ],
-        'gridelements' => [
-            'additionalStylesheet' => '',
-            'disableAutomaticUnusedColumnCorrection' => '0',
-            'disableCopyFromPageButton' => '0',
-            'disableDragInWizard' => '0',
-            'fluidBasedPageModule' => '0',
-            'nestingInListModule' => '0',
-            'overlayShortcutTranslation' => '0',
         ],
         'news' => [
             'advancedMediaPreview' => '1',

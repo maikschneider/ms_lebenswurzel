@@ -40,19 +40,13 @@
     "typo3/cms-viewpage": "^11.4",
     "georgringer/news": "^9.0",
     "blueways/deployer-recipes": "^2.0",
-    "blueways/bw-placeholder-images": "@dev",
+    "blueways/bw-placeholder-images": "^1.2",
     "b13/container": "^2.1"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest",
     "rector/rector": "^0.12.20"
   },
-  "repositories": [
-    {
-      "type": "path",
-      "url": "./packages/bw_placeholder_images"
-    }
-  ],
   "autoload": {
     "psr-4": {
       "MaikSchneider\\MsLebenswurzel\\": "Classes"
