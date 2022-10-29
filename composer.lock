@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eaad0d668ed56ef8afa9c3f722f916ae",
+    "content-hash": "f447cd5c9875b036cf3cc19b8df1ff9c",
     "packages": [
         {
             "name": "b13/container",
@@ -1135,76 +1135,6 @@
                 }
             ],
             "time": "2022-04-26T17:07:12+00:00"
-        },
-        {
-            "name": "gridelementsteam/gridelements",
-            "version": "11.0.0-dev",
-            "dist": {
-                "type": "path",
-                "url": "./packages/gridelements",
-                "reference": "a6588c02da7dbd5cde8f8c1039e92b02976d8a75"
-            },
-            "require": {
-                "typo3/cms-backend": "^10.4 || ^11.5 || dev-master",
-                "typo3/cms-core": "^10.4 || ^11.5 || dev-master",
-                "typo3/cms-frontend": "^10.4 || ^11.5 || dev-master",
-                "typo3/cms-recordlist": "^10.4 || ^11.5 || dev-master"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.1.0",
-                "friendsoftypo3/phpstan-typo3": "^0.8.1",
-                "phpstan/phpstan": "^0.12.99"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "gridelements"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GridElementsTeam\\Gridelements\\": "Classes/"
-                }
-            },
-            "scripts": {
-                "php:fix": [
-                    ".Build/vendor/bin/php-cs-fixer --config=Configuration/php-cs-fixer.php fix Classes Tests"
-                ],
-                "ci:php:lint": [
-                    "find *.php Classes Configuration Tests -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l"
-                ],
-                "ci:php:fixer": [
-                    ".Build/vendor/bin/php-cs-fixer --config=Configuration/php-cs-fixer.php fix --dry-run -v --show-progress=dots Classes Configuration Tests"
-                ],
-                "ci:php:stan": [
-                    ".Build/vendor/bin/phpstan --no-progress"
-                ],
-                "phpstan:baseline": [
-                    ".Build/vendor/bin/phpstan  --generate-baseline=phpstan-baseline.neon"
-                ],
-                "typo3:docs:render": [
-                    "docker-compose run --rm t3docmake"
-                ],
-                "typo3:docs:serve": [
-                    "php -S 127.0.0.1:4000 -t Documentation-GENERATED-temp/Result/project/0.0.0"
-                ]
-            },
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "description": "This extension integrates the grid layout concept also to regular content elements - the grid elements. It offers a lot of new features like advanced drag & drop or real references, that improve the usability of the page and list module to speed up the daily work with the backend.",
-            "homepage": "https://forge.typo3.org/projects/extension-gridelements2",
-            "keywords": [
-                "Gridelements",
-                "Grids",
-                "TYPO3 CMS"
-            ],
-            "support": {
-                "issues": "https://forge.typo3.org/projects/extension-gridelements2/issues"
-            },
-            "transport-options": {
-                "relative": true
-            }
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -8853,7 +8783,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "gridelementsteam/gridelements": 20,
         "blueways/bw-placeholder-images": 20,
         "roave/security-advisories": 20
     },

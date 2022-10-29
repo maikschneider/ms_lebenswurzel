@@ -24,10 +24,6 @@ config {
 	headerComment = {$config.headerComment}
 	contentObjectExceptionHandler = {$config.contentObjectExceptionHandler}
 
-	# realurl
-	tx_realurl_enable = {$config.tx_realurl_enable}
-	absRefPrefix = /
-
 	# language
 	sys_language_uid = 1
 	sys_language_overlay = 0
