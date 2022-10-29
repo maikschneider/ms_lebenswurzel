@@ -42,10 +42,11 @@
     "georgringer/news": "^9.0",
     "blueways/deployer-recipes": "^2.0",
     "blueways/bw-placeholder-images": "@dev",
-    "php": "^8.0"
+    "b13/container": "^2.1"
   },
   "require-dev": {
-    "roave/security-advisories": "dev-latest"
+    "roave/security-advisories": "dev-latest",
+    "rector/rector": "^0.12.20"
   },
   "repositories": [
     {

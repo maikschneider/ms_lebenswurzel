@@ -21,6 +21,14 @@ tt_content {
 			}
 		}
 	}
+
+	container-accordion < lib.contentElement
+	container-accordion {
+		templateName = Accordion
+		dataProcessing {
+        	100 = B13\Container\DataProcessing\ContainerProcessor
+		}
+	}
 }
 
 # Extend MenuSubPages to include menu item itself and children
