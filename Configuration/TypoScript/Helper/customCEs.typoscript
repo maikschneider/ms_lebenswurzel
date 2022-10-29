@@ -43,6 +43,19 @@ tt_content {
 			}
 		}
 	}
+
+	container-header < lib.contentElement
+	container-header {
+		templateName = Header
+		dataProcessing {
+			10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+			10 {
+				references.fieldName = assets
+			}
+			
+        	100 = B13\Container\DataProcessing\ContainerProcessor
+		}
+	}
 }
 
 # Extend MenuSubPages to include menu item itself and children

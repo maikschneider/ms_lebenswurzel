@@ -18,3 +18,5 @@
     )
         ->setIcon('EXT:ms_lebenswurzel/Resources/Public/Icons/Gridelements/Features.svg')
 );
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'style', 'container-features', 'after:header');

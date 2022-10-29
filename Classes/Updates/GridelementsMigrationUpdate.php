@@ -21,6 +21,22 @@ class GridelementsMigrationUpdate implements UpgradeWizardInterface, RepeatableI
                 'style' => 'style',
             ],
         ],
+        '4' => [
+            'container_identifier' => 'container-accordion',
+            'children_map' => [
+                11 => 11,
+            ],
+        ],
+        '3' => [
+            'container_identifier' => 'container-header',
+            'children_map' => [
+                11 => 11,
+            ],
+            'flexform_tca_map' => [
+                'position' => 'style',
+                'image' => 'assets',
+            ],
+        ],
     ];
 
     public function getIdentifier(): string

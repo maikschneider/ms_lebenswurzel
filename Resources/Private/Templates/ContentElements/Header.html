@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+{namespace bw=Blueways\BwPlaceholderImages\ViewHelpers}
+
+<f:if condition="{files.0">
+    <section class="header grid-y align-center header--in-content placeholderimage"
+            {bw:responsiveBackgroundImage(image:files.0,
+            small: {width: 640, cropVariant:'medium'},
+            medium: {maxWidth: 1024, cropVariant:'medium'}, large: {maxWidth: 1680, cropVariant:'large'})->f:format.raw()} >
+
+    <div class="cell show-for-medium">
+            <f:if condition="{children_11}">
+                <div class="grid-container grid-x align-{data.style}">
+                    <div class="small-6 large-4 cell">
+                        <div class="header__textbox">
+                            <f:format.raw>{children_11.0.renderedContent}</f:format.raw>
+                        </div>
+                    </div>
+                </div>
+            </f:if>
+        </div>
+
+    </section>
+</f:if>
+
+<f:if condition="{children_11}">
+    <section class="header__textbox hide-for-medium">
+        <f:format.raw>{children_11.0.renderedContent}</f:format.raw>
+    </section>
+</f:if>
