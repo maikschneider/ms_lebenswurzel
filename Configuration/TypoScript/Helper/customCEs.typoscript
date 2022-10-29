@@ -21,6 +21,55 @@ tt_content {
 			}
 		}
 	}
+
+	container-accordion < lib.contentElement
+	container-accordion {
+		templateName = Accordion
+		dataProcessing {
+        	100 = B13\Container\DataProcessing\ContainerProcessor
+		}
+	}
+
+	container-features < lib.contentElement
+	container-features {
+		templateName = Features
+		dataProcessing {
+        	100 = B13\Container\DataProcessing\ContainerProcessor
+			100.dataProcessing {
+				10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+				10 {
+					references.fieldName = assets
+				}
+			}
+		}
+	}
+
+	container-header < lib.contentElement
+	container-header {
+		templateName = Header
+		dataProcessing {
+			10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+			10 {
+				references.fieldName = assets
+			}
+
+        	100 = B13\Container\DataProcessing\ContainerProcessor
+		}
+	}
+
+	container-roadmap < lib.contentElement
+	container-roadmap {
+		templateName = Roadmap
+		dataProcessing {
+        	100 = B13\Container\DataProcessing\ContainerProcessor
+			100.dataProcessing {
+				10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+				10 {
+					references.fieldName = assets
+				}
+			}
+		}
+	}
 }
 
 # Extend MenuSubPages to include menu item itself and children

@@ -2,7 +2,6 @@
 #### DEPENDENCIES ####
 ######################
 @import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'
-@import 'EXT:gridelements/Configuration/TypoScript/constants.typoscript'
 @import 'EXT:bw_placeholder_images/Configuration/TypoScript/constants.typoscript'
 @import 'EXT:news/Configuration/TypoScript/constants.txt'
 
@@ -67,7 +66,6 @@ config {
     debug = 0
     contentObjectExceptionHandler = 1
     enableContentLengthHeader = 1
-    tx_realurl_enable = 1
     compressJs = 1
     compressCss = 1
     concatenateJs = 1

@@ -6,8 +6,3 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:ms_lebenswurzel/Configuration/PageTS/TCEMAIN.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:ms_lebenswurzel/Configuration/PageTS/Mod/WebLayout/BackendLayouts.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:ms_lebenswurzel/Configuration/PageTS/Mod/wizards.typoscript">
-
-#
-# Gridelements
-#
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ms_lebenswurzel/Configuration/PageTS/Gridelements" extensions="typoscript">

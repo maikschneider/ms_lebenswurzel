@@ -2,7 +2,6 @@
 #### DEPENDENCIES ####
 ######################
 @import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
-@import 'EXT:gridelements/Configuration/TypoScript/setup.typoscript'
 @import 'EXT:form/Configuration/TypoScript/setup.typoscript'
 @import 'EXT:bw_placeholder_images/Configuration/TypoScript/setup.typoscript'
 @import 'EXT:news/Configuration/TypoScript/setup.txt'
@@ -15,7 +14,6 @@
 @import 'EXT:ms_lebenswurzel/Configuration/TypoScript/Helper/page.typoscript'
 @import 'EXT:ms_lebenswurzel/Configuration/TypoScript/Helper/DynamicContent.typoscript'
 @import 'EXT:ms_lebenswurzel/Configuration/TypoScript/Helper/lib.typoscript'
-@import 'EXT:ms_lebenswurzel/Configuration/TypoScript/Helper/ext.Gridelements.typoscript'
 @import 'EXT:ms_lebenswurzel/Configuration/TypoScript/Helper/customCEs.typoscript'
 @import 'EXT:ms_lebenswurzel/Configuration/TypoScript/Helper/ext.form.typoscript'
 @import 'EXT:ms_lebenswurzel/Configuration/TypoScript/Helper/ext.news.typoscript'

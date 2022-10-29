@@ -1,0 +1,56 @@
+<f:layout name="Default" />
+
+<f:section name="Main">
+<div class="roadmap roadmap--style-{data.flexform_style}">
+    <f:for each="{children_11}" as="element" iteration="i">
+
+        <div class="grid-x">
+            <div class="cell hide-for-medium roadmap__line">
+
+            </div>
+            <div class="cell auto {f:if(condition:i.isEven, else:'show-for-medium')} medium-text-right roadmap__item">
+                <f:if condition="{i.isEven}">
+                    <h4 class="medium-text-right">{element.header}</h4>
+                    <f:format.html>{element.bodytext}</f:format.html>
+
+                    <f:if condition="{element.files.0}">
+                        <div class="ce-gallery">
+                            <f:image image="{element.files.0}" />
+                        </div>
+                    </f:if>
+
+                    <f:if condition="{element.button_link}">
+                        <f:render partial="Buttons" arguments="{data: element}" />
+                    </f:if>
+                </f:if>
+            </div>
+            <div class="cell show-for-medium roadmap__line">
+
+            </div>
+            <div class="cell auto {f:if(condition:i.isOdd, else:'show-for-medium')} roadmap__item">
+                <f:if condition="{i.isOdd}">
+                    <h4>{element.header}</h4>
+                    <f:format.html>{element.bodytext}</f:format.html>
+
+                    <f:if condition="{element.files.0}">
+                        <div class="ce-gallery">
+                            <f:image image="{element.files.0}" />
+                        </div>
+                    </f:if>
+
+                    <f:if condition="{element.button_link}">
+                        <f:render partial="Buttons" arguments="{data: element}" />
+                    </f:if>
+                </f:if>
+            </div>
+        </div>
+    </f:for>
+
+    <div class="roadmap__bottom-content">
+        <f:for each="{children_21}" as="element">
+            <f:format.raw>{element.renderedContent}</f:format.raw>
+        </f:for>
+    </div>
+
+</div>
+</f:section>

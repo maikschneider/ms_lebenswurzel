@@ -296,6 +296,13 @@ $temporaryColumns = array(
                 'default' => ''
             ]
         ],
+        'style' => [
+            'exclude' => false,
+            'label' => 'style',
+            'config' => [
+                'type' => 'input'
+            ],
+        ],
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
