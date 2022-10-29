@@ -52,8 +52,22 @@ tt_content {
 			10 {
 				references.fieldName = assets
 			}
-			
+
         	100 = B13\Container\DataProcessing\ContainerProcessor
+		}
+	}
+
+	container-roadmap < lib.contentElement
+	container-roadmap {
+		templateName = Roadmap
+		dataProcessing {
+        	100 = B13\Container\DataProcessing\ContainerProcessor
+			100.dataProcessing {
+				10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+				10 {
+					references.fieldName = assets
+				}
+			}
 		}
 	}
 }
