@@ -20,3 +20,8 @@
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'style', 'container-features', 'after:header');
+
+$GLOBALS['TCA']['tt_content']['types']['container-features']['columnsOverrides']['style']['config']['items'] = [
+    ['Default', '1'],
+    ['Style 2', '2'],
+];
