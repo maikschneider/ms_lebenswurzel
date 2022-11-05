@@ -26,4 +26,10 @@
         ->setIcon('EXT:ms_lebenswurzel/Resources/Public/Icons/Gridelements/Roadmap.svg')
 );
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'style', 'container-roadmap', 'after:header');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'style', 'container-roadmap',
+    'after:header');
+
+$GLOBALS['TCA']['tt_content']['types']['container-roadmap']['columnsOverrides']['style']['config']['items'] = [
+    ['Default', 'default'],
+    ['Green', 'green'],
+];

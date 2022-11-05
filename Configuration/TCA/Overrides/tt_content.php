@@ -300,7 +300,9 @@ $temporaryColumns = array(
             'exclude' => false,
             'label' => 'style',
             'config' => [
-                'type' => 'input'
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => []
             ],
         ],
 );
