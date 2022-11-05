@@ -21,3 +21,8 @@
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'assets', 'container-header', 'after:header');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'style', 'container-header', 'after:header');
+
+$GLOBALS['TCA']['tt_content']['types']['container-header']['columnsOverrides']['style']['config']['items'] = [
+    ['Left', 'left'],
+    ['Right', 'right'],
+];
