@@ -171,6 +171,7 @@ page {
 
 	includeCSS {
 		ms_lebenswurzel_layout = EXT:ms_lebenswurzel/Resources/Public/Css/app.css
+		fixes = EXT:ms_lebenswurzel/Resources/Public/Css/fixes.css
 	}
 
 	includeJSLibs {

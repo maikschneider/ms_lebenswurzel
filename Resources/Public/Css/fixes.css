@@ -1,0 +1,3 @@
+section.header.header--in-content > div {
+    z-index: 2;
+}
