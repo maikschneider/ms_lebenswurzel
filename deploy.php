@@ -2,7 +2,7 @@
 
 namespace Deployer;
 
-require_once(__DIR__ . '/vendor/blueways/deployer-recipes/autoload.php');
+require_once(__DIR__ . '/vendor/xima/xima-deployer-extended-typo3/autoload.php');
 
 set('repository', 'git@github.com:maikschneider/ms_lebenswurzel.git');
 
@@ -12,12 +12,10 @@ set('db_dumpclean_keep', [
 ]);
 
 host('production')
-    ->hostname('lebenswurzel.org')
-    ->port('24327')
-    ->stage('production')
-    ->user('lebenswurzel')
-    ->set('http_user', 'www-data')
-    ->set('writable_mode', 'chmod')
+    ->setRemoteUser('lebenswurzel')
+    ->setHostname('lebenswurzel.org')
+    ->setPort('24327')
+    ->set('labels', ['production'])
     ->set('branch', 'master')
     ->set('public_urls', [
         'https://lebenswurzel.org'
@@ -25,6 +23,3 @@ host('production')
     ->set('bin/composer', '/usr/local/bin/composer')
     ->set('deploy_path', '/home/lebenswurzel/vhosts/lebenswurzel.org/typo3-production');
 
-host('local')
-    ->hostname('local')
-    ->set('deploy_path', getcwd());

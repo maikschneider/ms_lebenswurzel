@@ -39,7 +39,7 @@
     "typo3/cms-tstemplate": "^11.4",
     "typo3/cms-viewpage": "^11.4",
     "georgringer/news": "^9.0",
-    "blueways/deployer-recipes": "^2.0",
+    "xima/xima-deployer-extended-typo3": "^1.3",
     "blueways/bw-placeholder-images": "^1.2",
     "b13/container": "^2.1"
   },
